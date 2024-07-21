@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import HeroImg from '../../public/images/HeroImg.svg';
 import { GiArchiveRegister } from "react-icons/gi";
 import { IoMdArrowForward } from "react-icons/io";
-
+import {Link} from 'react-router-dom';
 import AOS from 'aos';
 import Footer from '../components/Landing/Footer';
 
@@ -49,18 +49,23 @@ function Landing() {
             Our platform offers a seamless way for students to prepare for their National Exams. Join us to start your journey.
           </p>
           <div className='flex gap-4 items-center justify-center md:justify-start'>
+            <Link to="/auth/login">
             <button
               onClick={() => navigateToAuthentication('/login')}
               className='bg-[#9835ff] text-white px-6 py-3 rounded-lg font-normal text-lg transition-transform duration-300 hover:translate-y-[-3px] pop flex items-center gap-2 md:m-0'
             >
               Login <IoMdArrowForward />
             </button>
-            <button
+            </Link>
+                <Link>
+                <button
               onClick={() => navigateToAuthentication('/register')}
               className='border border-[#9835ff] text-[#9835ff] px-6 py-3 rounded-lg font-normal text-lg transition-transform duration-300 hover:translate-y-[-3px] pop flex items-center gap-2 md:m-0'
             >
            <GiArchiveRegister size={20} /> Register
             </button>
+                </Link>
+          
           </div>
         </div>
         <div className='mt-8 md:mt-0 md:ml-8 md:w-1/2' data-aos='fade-right'>
