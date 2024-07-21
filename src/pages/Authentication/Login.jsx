@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import LoginImg from '../../../public/images/LoginImg.gif';
+import LoginImg from '../../../public/images/LoginImgg.gif';
 import AmazonLoader from '../../components/Landing/AmazonLoader';
 import { FaEye, FaEyeSlash, FaGoogle, FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from "react-icons/fc";
