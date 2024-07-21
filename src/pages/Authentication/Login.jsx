@@ -131,7 +131,7 @@ function Login() {
               </button>
             </div>
           </form>
-          <p className='text-gray-400 mt-4 text-center'>Don't have an account? <Link to="/register" className="text-[#9835ff] hover:underline font-medium">Register</Link></p>
+          <p className='text-gray-400 mt-4 text-center'>Don't have an account? <Link to="/auth/register" className="text-[#9835ff] hover:underline font-medium">Register</Link></p>
         </div>
       </div>
     </div>

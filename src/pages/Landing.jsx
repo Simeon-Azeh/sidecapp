@@ -57,7 +57,7 @@ function Landing() {
               Login <IoMdArrowForward />
             </button>
             </Link>
-                <Link>
+                <Link to="/auth/register">
                 <button
               onClick={() => navigateToAuthentication('/register')}
               className='border border-[#9835ff] text-[#9835ff] px-6 py-3 rounded-lg font-normal text-lg transition-transform duration-300 hover:translate-y-[-3px] pop flex items-center gap-2 md:m-0'
