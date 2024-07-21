@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import LoginImg from '../../../public/images/LoginImg.svg';
+import LoginImg from '../../../public/images/LoginImg.gif';
 import AmazonLoader from '../../components/Landing/AmazonLoader';
 import { FaEye, FaEyeSlash, FaGoogle, FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from "react-icons/fc";
@@ -53,9 +53,9 @@ function Login() {
   }
 
   return (
-    <div className="w-full md:w-4/5 mx-auto py-8 px-10 md:px-0 font-poppins">
-      <div className="flex flex-col md:flex-row items-center bg-white p-8 rounded-lg border">
-        <img src={LoginImg} alt="Login" className="w-full mb-8 md:mb-0 md:w-1/2 h-auto rounded shadow-lg hover:scale-105 duration-300 cursor-pointer" />
+    <div className="w-full md:w-4/5 mx-auto md:py-8  md:px-0 font-poppins">
+      <div className="flex flex-col md:flex-row items-center bg-white p-8 md:rounded-lg border">
+        <img src={LoginImg} alt="Login" className="w-full mb-8 md:mb-0 md:w-1/2 h-auto hover:scale-105 duration-300 cursor-pointer" />
         <div className="md:ml-8 w-full md:w-1/2">
           <h2 className="text-xl font-semibold mb-1 text-[#404660]">Welcome back!</h2>
           <p className='text-gray-400 mb-4'>Log into your account</p>
@@ -114,17 +114,17 @@ function Login() {
                 <p>or</p>
                 <div className='w-full h-[1px] bg-gray-300'></div>
             </div>
-            <div className="flex items-center justify-center mt-6 gap-4">
+            <div className="flex items-center md:justify-center mt-6 gap-2 md:gap-4">
               <button
                 type="button"
-                className="flex items-center gap-2 border py-2 px-4 rounded-md border-gray-400 border-solid hover:translate-y-[-2px] duration-300  font-medium text-[#404660] hover:text-[#9835ff]"
+                className="flex items-center gap-2 border py-2 px-2 md:px-4 rounded-md border-gray-400 border-solid hover:translate-y-[-2px] duration-300  font-medium text-[#404660] hover:text-[#9835ff]"
               >
                 <FcGoogle size={20}/>
                 Login with Google
               </button>
               <button
                 type="button"
-                className="flex items-center gap-2 border py-2 px-4 rounded-md border-gray-400 border-solid hover:translate-y-[-2px] duration-300 font-medium text-[#404660] hover:text-[#9835ff]"
+                className="flex items-center gap-2 border py-2 px-2 md:px-4 rounded-md border-gray-400 border-solid hover:translate-y-[-2px] duration-300 font-medium text-[#404660] hover:text-[#9835ff]"
               >
                 <FaFacebook className="text-blue-600" size={20} />
                 Login with Facebook
