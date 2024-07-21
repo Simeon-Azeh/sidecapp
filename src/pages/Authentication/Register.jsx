@@ -130,17 +130,17 @@ function Register() {
             <div className="flex items-center md:justify-center mt-6 gap-2 md:gap-4">
               <button
                 type="button"
-                className="flex items-center gap-2 border py-2 px-2 md:px-2 rounded-md border-gray-400 border-solid hover:translate-y-[-2px] duration-300 font-medium text-[#404660] hover:text-[#9835ff]"
+                className="flex items-center gap-2 border py-2 px-2 md:px-4 rounded-md border-gray-400 border-solid hover:translate-y-[-2px] duration-300 font-medium text-[#404660] hover:text-[#9835ff]"
               >
                 <FcGoogle size={20}/>
-                Register with Google
+                 Google Sign-Up
               </button>
               <button
                 type="button"
-                className="flex items-center gap-2 border py-2 px-2 md:px-2 rounded-md border-gray-400 border-solid hover:translate-y-[-2px] duration-300 font-medium text-[#404660] hover:text-[#9835ff]"
+                className="flex items-center gap-2 border py-2 px-2 md:px-4 rounded-md border-gray-400 border-solid hover:translate-y-[-2px] duration-300 font-medium text-[#404660] hover:text-[#9835ff]"
               >
                 <FaFacebook className="text-blue-600" size={20} />
-                Register with Facebook
+                Facebook Sign-Up
               </button>
             </div>
           </form>
