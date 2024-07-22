@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import { FaBook, FaChalkboardTeacher, FaCertificate } from 'react-icons/fa';
 import Card from '../components/Dashboard/Card';
 import ProfileContainer from '../components/Dashboard/ProfileContainer';
+import ResponsiveTable from '../components/Dashboard/ResponsiveTable';
 
 function Dashboard() {
   return (
@@ -73,6 +74,9 @@ function Dashboard() {
         IbgColor="bg-fuchsia-500 text-white"
         BtnBgcolor="text-gray-400"
       />
+    </div>
+    <div>
+        <ResponsiveTable />
     </div>
             </div>
             <div className='w-full px-7 mt-5 md:mt-0 md:px-0 md:w-[30%]'>
