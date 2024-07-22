@@ -59,7 +59,7 @@ function Sidebar({ children }) {
         </button>
       </div>
       <SidebarContext.Provider value={{ expanded }}>
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden">
           <ul className="px-3">{children}</ul>
         </div>
       </SidebarContext.Provider>
@@ -92,7 +92,7 @@ function Sidebar({ children }) {
   return (
     <>
       {/* Show toggle button on small screens only */}
-      <button className="md:hidden p-2 fixed top-4 left-6 bg-white z-1000 rounded" onClick={toggleDrawer}>
+      <button className="md:hidden text-[22px]  fixed top-4 left-6 text-[#404660] z-1000 rounded" onClick={toggleDrawer}>
         <MenuOutlined size={30} />
       </button>
       <Drawer
