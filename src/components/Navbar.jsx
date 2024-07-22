@@ -40,7 +40,7 @@ function Navbar() {
   return (
     <div className="flex bg-white flex-col-reverse md:flex-row justify-between items-center px-4 md:px-14 py-4">
       <h1 className="text-lg hidden md:flex items-center gap-2 font-semibold text-gray-500">
-      {greeting}, <span className="text-[#57bdb1] text-[22px]">Simeon!</span>
+      {greeting}, <span className="text-[#9835ff] text-[22px]">Simeon!</span>
       <MdWavingHand className="wave-icon" />
     </h1>
       <div className="flex items-center gap-4 ml-auto">
