@@ -1,7 +1,7 @@
 import React, { useContext, createContext, useState, useEffect } from "react";
-import Logo from "../../../public/images/SidecLogo.png";
-import AlternateLogo from "../../../public/images/Asset 6.png";
-import ProfileAvatar from "../../../public/images/avatartwo.avif";
+import Logo from "../../public/images/SidecLogo.png";
+import AlternateLogo from "../../public/images/Asset 6.png";
+import ProfileAvatar from "../../public/images/avatartwo.avif";
 import { LuChevronFirst, LuChevronLast } from "react-icons/lu";
 import { IoMdMore } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
@@ -92,7 +92,7 @@ function Sidebar({ children }) {
   return (
     <>
       {/* Show toggle button on small screens only */}
-      <button className="md:hidden text-[22px]  fixed top-4 left-6 text-[#404660] z-1000 rounded" onClick={toggleDrawer}>
+      <button className="md:hidden text-[22px]  fixed top-4 left-6 text-[#404660] z-20 rounded" onClick={toggleDrawer}>
         <MenuOutlined size={30} />
       </button>
       <Drawer

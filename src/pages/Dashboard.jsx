@@ -1,11 +1,13 @@
 import React from 'react';
-import Sidebar, { SidebarItem, DropdownItem } from '../components/Dashboard/Sidebar';
+import Sidebar, { SidebarItem, DropdownItem } from '../components/Sidebar';
 import { MdDashboardCustomize, MdPeople, MdAccessTime, MdReport, MdSettings, MdBook, MdHelp, MdMessage, MdExtension } from 'react-icons/md';
+import Navbar from '../components/Navbar';
 
 function Dashboard() {
   return (
-    <div className="flex">
-      <Sidebar>
+    <div className="flex h-screen">
+        <div className='z-40'>
+        <Sidebar>
         <SidebarItem icon={<MdExtension size={20} />} text="Discover" />
         <SidebarItem icon={<MdDashboardCustomize size={20} />} text="Dashboard" active alert/>
         <SidebarItem icon={<MdBook size={20} />} text="Courses">
@@ -31,10 +33,15 @@ function Dashboard() {
         <SidebarItem icon={<MdSettings size={20} />} text="Settings" />
         <SidebarItem icon={<MdHelp size={20} />} text="Support" />
       </Sidebar>
+        </div>
+    
 
-      <div className="flex-1">
-        <div className="p-6">
-          {/* Main content here */}
+      <div className="flex-1 overflow-y-auto">
+        <div className="sticky top-0">
+        <Navbar />
+        </div>
+        <div>
+
         </div>
       </div>
     </div>
