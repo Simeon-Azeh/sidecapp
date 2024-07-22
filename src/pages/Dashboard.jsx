@@ -4,6 +4,7 @@ import { MdDashboardCustomize, MdPeople, MdAccessTime, MdReport, MdSettings, MdB
 import Navbar from '../components/Navbar';
 import { FaBook, FaChalkboardTeacher, FaCertificate } from 'react-icons/fa';
 import Card from '../components/Dashboard/Card';
+import ProfileContainer from '../components/Dashboard/ProfileContainer';
 
 function Dashboard() {
   return (
@@ -74,8 +75,10 @@ function Dashboard() {
       />
     </div>
             </div>
-            <div className='w-full md:w-[30%]'>
-        
+            <div className='w-full px-7 mt-5 md:mt-0 md:px-0 md:w-[30%]'>
+            <div>
+                <ProfileContainer />
+            </div>
             </div>
 
         </div>
