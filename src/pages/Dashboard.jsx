@@ -2,6 +2,8 @@ import React from 'react';
 import Sidebar, { SidebarItem, DropdownItem } from '../components/Sidebar';
 import { MdDashboardCustomize, MdPeople, MdAccessTime, MdReport, MdSettings, MdBook, MdHelp, MdMessage, MdExtension } from 'react-icons/md';
 import Navbar from '../components/Navbar';
+import { FaBook, FaChalkboardTeacher, FaCertificate } from 'react-icons/fa';
+import Card from '../components/Dashboard/Card';
 
 function Dashboard() {
   return (
@@ -40,12 +42,40 @@ function Dashboard() {
         <div className="sticky top-0 z-10">
         <Navbar />
         </div>
-        <div className='flex flex-col px-4 md:flex-row'>
-            <div className='w-full md:w-[50%]'>
-
+        <div className='flex flex-col px-4 md:flex-row p-6'>
+            <div className='w-full md:w-[70%] px-8'>
+            <div className="flex flex-col md:flex-row gap-4">
+      <Card
+        icon={FaBook}
+        bgColor="border-[#9835ff] border bg-white"
+        title="24"
+        description="Enrolled Courses"
+        detailsLink="/courses"
+        IbgColor="bg-[#9835ff] text-white"
+        BtnBgcolor="text-[#9835ff] "
+      />
+      <Card
+        icon={FaChalkboardTeacher}
+        bgColor="bg-white border"
+        title="2"
+        description="Saved Courses"
+        detailsLink="/lessons"
+        IbgColor="bg-emerald-400 text-white"
+        BtnBgcolor="text-gray-400"
+      />
+      <Card
+        icon={FaCertificate}
+        bgColor="bg-white border"
+        title="4"
+        description="Certificates"
+        detailsLink="/certificates"
+        IbgColor="bg-fuchsia-500 text-white"
+        BtnBgcolor="text-gray-400"
+      />
+    </div>
             </div>
-            <div className='w-full md:w-[50%]'>
-
+            <div className='w-full md:w-[30%]'>
+        
             </div>
 
         </div>
