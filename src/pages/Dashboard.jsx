@@ -27,6 +27,7 @@ function Dashboard() {
         </SidebarItem>
         <SidebarItem icon={<MdMessage size={20} />} text="Messages" />
         <SidebarItem icon={<MdExtension size={20} />} text="IQ Link" />
+        <hr className='my-4'/>
         <SidebarItem icon={<MdSettings size={20} />} text="Settings" />
         <SidebarItem icon={<MdHelp size={20} />} text="Support" />
       </Sidebar>
