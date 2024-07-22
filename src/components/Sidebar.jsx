@@ -43,16 +43,16 @@ function Sidebar({ children }) {
 
   const SidebarContent = () => (
     <nav className="h-full flex flex-col bg-white border-r shadow-sm font-poppins">
-      <div className="p-4 pb-2 flex justify-between items-center">
+      <div className="relative p-3 pb-1 flex justify-between items-center ">
         <img
           src={expanded ? Logo : AlternateLogo}
           alt="logo"
-          className={`overflow-hidden transition-all ${expanded ? "w-20" : "w-10"}`}
+          className={`overflow-hidden mt-4 transition-all ${expanded ? "w-28" : "w-10 mt-0"}`}
         />
         {/* Only show this button on larger screens */}
         <button
           onClick={toggleSidebar}
-          className={`p-1.5 rounded-lg bg-gray-50 text-gray-500 hover:bg-gray-100 duration-300 ${window.innerWidth >= 768 ? "block" : "hidden"}`}
+          className={`p-1.5 absolute -right-2.5 top-5 rounded-lg bg-gray-50 text-gray-500 hover:bg-gray-100 duration-300 ${window.innerWidth >= 768 ? "block" : "hidden"}`}
           style={{ zIndex: 1000 }}
         >
           {expanded ? <LuChevronFirst /> : <LuChevronLast />}

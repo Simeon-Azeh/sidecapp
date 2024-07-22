@@ -40,7 +40,13 @@ function Dashboard() {
         <div className="sticky top-0 z-10">
         <Navbar />
         </div>
-        <div>
+        <div className='flex flex-col px-4 md:flex-row'>
+            <div className='w-full md:w-[50%]'>
+
+            </div>
+            <div className='w-full md:w-[50%]'>
+
+            </div>
 
         </div>
       </div>
