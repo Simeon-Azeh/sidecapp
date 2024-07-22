@@ -21,7 +21,7 @@ const StepContent = ({
           <form className="flex flex-col space-y-4">
             <div className="flex flex-col md:flex-row md:gap-4">
               <div className="flex flex-col w-full">
-                <label className="block text-[#404660] font-medium text-sm mb-4">First Name</label>
+                <label className="block text-[#404660] font-medium text-sm my-4 md:my-0">First Name</label>
                 <input
                   type="text"
                   name="firstname"

@@ -4,6 +4,7 @@ import Landing from './pages/Landing'
 import Login from './pages/Authentication/Login'
 import Register from './pages/Authentication/Register';
 import Onboarding from './pages/Authentication/Onbarding';
+import Dashboard from './pages/Dashboard';
 
 
 function ScrollToTop() {
@@ -30,6 +31,7 @@ function App() {
        <Route path="/auth/login" element={<Login/>} />
        <Route path="/auth/register" element={<Register/>} />
        <Route path="/auth/onboarding" element={<Onboarding/>} />
+       <Route path="/dashboard" element={<Dashboard/>} />
      </Routes>
      </BrowserRouter>
     </>
