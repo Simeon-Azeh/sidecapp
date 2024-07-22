@@ -38,7 +38,7 @@ function Navbar() {
   };
 
   return (
-    <div className="flex bg-white justify-center md:flex-row md:justify-between items-center  md:px-14 py-4">
+    <div className="flex bg-white justify-center md:flex-row md:justify-between items-center px-10 sticky top-0 md:px-14 py-4 font-poppins">
       <h1 className="text-lg hidden md:flex items-center gap-2 font-semibold text-gray-500">
       {greeting}, <span className="text-[#9835ff] text-[22px]">Simeon!</span>
       <MdWavingHand className="wave-icon" />
