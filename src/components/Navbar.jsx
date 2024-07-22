@@ -38,7 +38,7 @@ function Navbar() {
   };
 
   return (
-    <div className="flex bg-white flex-col-reverse md:flex-row justify-between items-center px-4 md:px-14 py-4">
+    <div className="flex bg-white justify-center md:flex-row md:justify-between items-center  md:px-14 py-4">
       <h1 className="text-lg hidden md:flex items-center gap-2 font-semibold text-gray-500">
       {greeting}, <span className="text-[#9835ff] text-[22px]">Simeon!</span>
       <MdWavingHand className="wave-icon" />
@@ -81,12 +81,12 @@ function Navbar() {
         
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-60 p-2 bg-white border rounded-lg shadow-lg z-10">
-                <p className="text-gray-600 text-center font-medium ">You're in as a user</p>
-              <button className="w-full text-[#57bdb1] text-center p-2 hover:bg-gray-100">
-                Switch Profile
+                <p className="text-gray-600 text-center font-medium ">Basic user</p>
+              <button className="w-full text-[#9835ff] text-center p-2 hover:bg-gray-100">
+               Upgrade
               </button>
               <hr />
-              <button className="w-full text-[#57bdb1] text-center p-2 hover:bg-gray-100 flex items-center gap-2" onClick={toggleLanguageDropdown}>
+              <button className="w-full text-[#9835ff] text-center p-2 hover:bg-gray-100 flex items-center gap-2" onClick={toggleLanguageDropdown}>
               <IoLanguageOutline /> Change Language
               </button>
               {languageDropdownOpen && (
@@ -102,7 +102,7 @@ function Navbar() {
             
             </div>
           )}
-          <span className="absolute top-8 right-1 w-2 h-2 bg-green-500 rounded-full" title="Online"></span>
+          <span className="absolute top-8 right-1 w-2 h-2 bg-green-500 border border-white border-solid rounded-full" title="Online"></span>
         </div>
       </div>
     </div>
