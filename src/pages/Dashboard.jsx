@@ -6,6 +6,7 @@ import { FaBook, FaChalkboardTeacher, FaCertificate } from 'react-icons/fa';
 import Card from '../components/Dashboard/Card';
 import ProfileContainer from '../components/Dashboard/ProfileContainer';
 import ResponsiveTable from '../components/Dashboard/ResponsiveTable';
+import CourseList from '../components/Courses/CourseList';
 
 function Dashboard() {
   return (
@@ -84,9 +85,13 @@ function Dashboard() {
                 <ProfileContainer />
             </div>
             </div>
-
+      
+        </div>
+        <div className='w-full px-4 pl-12'>
+            <CourseList />
         </div>
       </div>
+      
     </div>
   );
 }
