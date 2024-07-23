@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseCard from './CourseCard';
+import { Link } from 'react-router-dom';
 import { TbAntennaBars5, TbAntennaBars4, TbAntennaBars3 } from 'react-icons/tb';
 
 const coursesData = {
@@ -159,14 +160,14 @@ const coursesData = {
 
 const CourseCategories = () => {
   return (
-    <div className=" p-6 rounded-lg  font-poppins">
-      {Object.keys(coursesData).map((category) => (
-        <div key={category} className="mb-8">
-          <h2 className="text-xl text-[#404660] font-medium mb-8 border-b pb-2">{category}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {coursesData[category].map((course, index) => (
+    <div className="p-6 rounded-lg font-poppins">
+    {Object.keys(coursesData).map((category) => (
+      <div key={category} className="mb-8">
+        <h2 className="text-xl text-[#404660] font-medium mb-8 border-b pb-2">{category}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {coursesData[category].map((course, index) => (
+            <Link to={`/courses/${category.toLowerCase()}/${index}`} key={index}>
               <CourseCard
-                key={index}
                 image={course.image}
                 title={course.title}
                 description={course.description}
@@ -175,13 +176,15 @@ const CourseCategories = () => {
                 rating={course.rating}
                 ratingCount={course.ratingCount}
               />
-            ))}
-          </div>
-
-          <button className="text-sm text-[#404660] m-auto flex font-medium mt-8 border py-1 px-3 rounded hover:translate-y-[-5px] duration-300">See more</button>
+            </Link>
+          ))}
         </div>
-      ))}
-    </div>
+        <Link to={`/courses/${category.toLowerCase()}`}>
+          <button className="text-sm text-[#404660] m-auto flex font-medium mt-8 border py-1 px-3 rounded hover:translate-y-[-5px] duration-300">See more</button>
+        </Link>
+      </div>
+    ))}
+  </div>
   );
 };
 

@@ -7,6 +7,7 @@ import Onboarding from './pages/Authentication/Onbarding';
 import Dashboard from './pages/Dashboard';
 import Discover from './pages/Discover';
 import Courses from './pages/Courses/Courses';
+import Science from './pages/Courses/Science';
 
 
 function ScrollToTop() {
@@ -36,6 +37,7 @@ function App() {
        <Route path="/dashboard" element={<Dashboard/>} />
        <Route path="/discover" element={<Discover/>} />
        <Route path="/courses" element={<Courses/>} />
+       <Route path="/courses/science" element={<Science/>} />
      </Routes>
      </BrowserRouter>
     </>
