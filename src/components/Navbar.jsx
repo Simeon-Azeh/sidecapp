@@ -44,11 +44,11 @@ function Navbar() {
       <MdWavingHand className="wave-icon" />
     </h1>
       <div className="flex items-center gap-4 ml-auto">
-        <div className="relative">
+        <div className="relative w-[80%] md:w-[300px] ml-6 md:ml-0 ">
           <input
             type="text"
-            placeholder="Find Courses..." className="p-2 pl-8 border rounded-lg text-sm bg-white text-gray-400 outline-none"
-            style={{ width: "250px" }}
+            placeholder="Find Courses..." className="p-2 pl-8 border rounded-lg text-sm bg-white text-gray-400 outline-none w-full"
+          
           />
           <FiSearch className="absolute left-3 top-2.5 text-gray-400" />
         </div>
