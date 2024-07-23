@@ -47,10 +47,10 @@ function Navbar() {
         <div className="relative">
           <input
             type="text"
-            placeholder="Search..." className="p-2 pl-8 border rounded-lg text-sm bg-white text-gray-400 outline-none"
-            style={{ width: "200px" }}
+            placeholder="Find Courses..." className="p-2 pl-8 border rounded-lg text-sm bg-white text-gray-400 outline-none"
+            style={{ width: "250px" }}
           />
-          <FiSearch className="absolute left-3 top-3 text-gray-400" />
+          <FiSearch className="absolute left-3 top-2.5 text-gray-400" />
         </div>
         <div className="relative">
           <button
@@ -71,22 +71,23 @@ function Navbar() {
           )}
         </div>
         <div className="relative">
-          
-          <img
+            <div className="w-12">
+            <img
             src={AvatarImg}
-            alt="Avatar" className="w-[40px] h-[40px]    md:w-10 md:h-10   rounded-full border border-white shadow-md cursor-pointer"
+            alt="Avatar" className="w-full object-contain  rounded-full border border-white shadow-md cursor-pointer"
             onClick={toggleDropdown}
           />
          
-        
+            </div>
+       
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-60 p-2 bg-white border rounded-lg shadow-lg z-10">
-                <p className="text-gray-600 text-center font-medium ">Basic user</p>
-              <button className="w-full text-[#9835ff] text-center p-2 hover:bg-gray-100">
+                <p className="text-gray-600  font-medium ">Basic user <span className="text-[#9835ff] border px-2 rounded ml-2">Free plan</span></p>
+              <button className="w-full text-left text-[#9835ff]  p-2 hover:bg-gray-100">
                Upgrade
               </button>
               <hr />
-              <button className="w-full text-[#9835ff] text-center p-2 hover:bg-gray-100 flex items-center gap-2" onClick={toggleLanguageDropdown}>
+              <button className="w-full text-[#9835ff]  p-2 hover:bg-gray-100 flex items-center gap-2" onClick={toggleLanguageDropdown}>
               <IoLanguageOutline /> Change Language
               </button>
               {languageDropdownOpen && (
