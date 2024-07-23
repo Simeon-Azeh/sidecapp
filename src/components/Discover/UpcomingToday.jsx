@@ -49,12 +49,12 @@ const UpcomingToday = ({
           </li>
         ))}
       </ul>
-      <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         <button className="text-[#404660] border  font-medium py-2 px-4 rounded hover:translate-y-[-5px] duration-300">
           Reschedule
         </button>
-        <button className="bg-[#9835ff] flex items-center gap-1 text-white font-medium py-2 px-4 rounded hover:translate-y-[-5px] duration-300">
-        Resume <IoArrowForward />
+        <button className="bg-[#9835ff]  md:flex items-center gap-1 text-white font-medium py-2 px-4 rounded hover:translate-y-[-5px] duration-300">
+        Resume <IoArrowForward className='hidden md:block' />
         </button>
       </div>
     </div>

@@ -210,7 +210,7 @@ const TabComponent = () => {
 
   return (
     <div className="bg-white p-6 rounded-lg border mt-6 font-poppins">
-      <div className="flex justify-around mb-4">
+      <div className="flex flex-col md:flex-row  justify-around mb-4">
         <button
           className={`px-4 py-2 font-medium ${activeTab === 'courses' ? 'border-b-2 border-[#9835ff] text-[#9835ff]' : ' text-gray-500'}`}
           onClick={() => {
