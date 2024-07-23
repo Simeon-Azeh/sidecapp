@@ -14,6 +14,7 @@ import GreetingCard from '../components/Discover/GreetingCard';
 import { Calendar, theme } from 'antd';
 import UpcomingToday from '../components/Discover/UpcomingToday';
 import CommunityLeaderboard from '../components/Discover/CommunityLeaderboard';
+import TabComponent from '../components/Discover/TabComponent';
 const onPanelChange = (value, mode) => {
   console.log(value.format('YYYY-MM-DD'), mode);
 };
@@ -123,6 +124,9 @@ function Discover() {
          <div>
        <CommunityLeaderboard />
          </div>
+         <div>
+            <TabComponent />
+         </div>
             </div>
             <div className='w-full px-7 mt-5 md:mt-0 md:px-0 md:w-[30%]'>
             <div className='font-poppins mx-auto' style={wrapperStyle}>
@@ -142,9 +146,7 @@ function Discover() {
             </div>
       
         </div>
-        <div className='w-full px-4 md:pl-12 pl-9 pr-9 md:pr-4'>
-            <CourseList />
-        </div>
+       
       </div>
       
     </div>
