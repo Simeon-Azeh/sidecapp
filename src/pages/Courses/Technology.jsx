@@ -6,78 +6,68 @@ import { MdDashboardCustomize, MdPeople, MdBook, MdSettings, MdHelp, MdMessage, 
 import { RiCompassDiscoverFill, RiArchiveDrawerFill } from "react-icons/ri";
 import { IoMdChatbubbles } from "react-icons/io";
 import Navbar from '../../components/Navbar';
-import { TbAntennaBars5, TbAntennaBars4} from 'react-icons/tb';
+import { TbAntennaBars5, TbAntennaBars4 } from 'react-icons/tb';
 import CourseCard from '../../components/Courses/CourseCard';
-import { GoHome } from "react-icons/go";
 
 const coursesData = [
   {
-    image: 'https://img.freepik.com/premium-photo/light-vintage-bulb-chalk-board-background_641298-22644.jpg?w=740',
-    title: 'Physics Basics',
-    description: 'Understand the fundamentals of Physics and apply...',
-    status: { title: 'Olevels', icon: <TbAntennaBars3 size={20} /> },
+    image: 'https://img.freepik.com/free-photo/code-with-technology-background-programming-concept_53876-124027.jpg',
+    title: 'Web Development',
+    description: 'Learn to build websites using HTML, CSS, and JavaScript...',
+    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
+    time: '8 hours',
+    rating: 4.8,
+    ratingCount: 150,
+  },
+  {
+    image: 'https://img.freepik.com/free-photo/closeup-image-computer-circuit-board_58466-10273.jpg',
+    title: 'Introduction to Hardware',
+    description: 'Understand the components of a computer system...',
+    status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
+    time: '6 hours',
+    rating: 4.5,
+    ratingCount: 130,
+  },
+  {
+    image: 'https://img.freepik.com/free-photo/programming-background-collage_23-2149901771.jpg?t=st=1721764931~exp=1721768531~hmac=119784a10bf4faed08460d44515e77c0521dffa62ab42aac1d109bc0aebbfcce&w=740',
+    title: 'Introduction to Programming',
+    description: 'Learn the basics of programming with JavaScript...',
+    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
     time: '4 hours',
     rating: 4.2,
+    ratingCount: 150,
+  },
+  {
+    image: 'https://img.freepik.com/free-photo/programming-background-collage_23-2149901782.jpg?t=st=1721764997~exp=1721768597~hmac=7f27bdf50c336d858b38f44f938f6b4611439db3be4b0287e61b1d61404e55cb&w=740',
+    title: 'Web Development',
+    description: 'Get started with HTML, CSS, and JavaScript...',
+    status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
+    time: '5 hours',
+    rating: 4.6,
+    ratingCount: 140,
+  },
+  {
+    image: 'https://img.freepik.com/premium-photo/abstract-background-molecules-technology-with-polygonal-shapes-connecting-dots-lines_7247-1132.jpg?w=740',
+    title: 'Mobile App Development',
+    description: 'Build your first mobile app with React Native...',
+    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
+    time: '3 hours',
+    rating: 4.3,
+    ratingCount: 130,
+  },
+  {
+    image: 'https://img.freepik.com/premium-photo/molecules-technology-with-polygonal-shapes-connecting-dots-lines_7247-1922.jpg?w=740',
+    title: 'Data Science Basics',
+    description: 'Introduction to data science and machine learning...',
+    status: { title: 'Advanced', icon: <TbAntennaBars5 size={20} /> },
+    time: '6 hours',
+    rating: 4.7,
     ratingCount: 120,
-  },
-  {
-    image: 'https://img.freepik.com/premium-photo/medical-science-blue-banner_978521-27821.jpg?w=826',
-    title: 'Chemistry Essentials',
-    description: 'Learn the basics of Chemistry and use it to prep for your...',
-    status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
-    time: '5 hours',
-    rating: 4.5,
-    ratingCount: 95,
-  },
-  {
-    image: 'https://img.freepik.com/free-photo/3d-medical-background-with-virus-cells-dna-strand_1048-7596.jpg?t=st=1721764163~exp=1721767763~hmac=6d2c1c0a34bc80fae33115e4a83cccb68e475a83ae4d560e3794b158565a19bc&w=740',
-    title: 'Biology for Beginners',
-    description: 'Introduction to Biology and its branches...',
-    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-    time: '3 hours',
-    rating: 4.1,
-    ratingCount: 110,
-  },
-  {
-    image: 'https://img.freepik.com/premium-photo/thermometer-earth-eco-climate-change-concept-3d-rendering_35719-8004.jpg?w=740',
-    title: 'Earth Science',
-    description: 'Explore the basics of Earth Science...',
-    status: { title: 'Advanced', icon: <TbAntennaBars5 size={20} /> },
-    time: '6 hours',
-    rating: 4.6,
-    ratingCount: 85,
-  },
-  {
-    image: 'https://img.freepik.com/premium-photo/medical-science-blue-banner_978521-27821.jpg?w=826',
-    title: 'Chemistry Essentials',
-    description: 'Learn the basics of Chemistry and use it to prep for your...',
-    status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
-    time: '5 hours',
-    rating: 4.5,
-    ratingCount: 95,
-  },
-  {
-    image: 'https://img.freepik.com/free-photo/3d-medical-background-with-virus-cells-dna-strand_1048-7596.jpg?t=st=1721764163~exp=1721767763~hmac=6d2c1c0a34bc80fae33115e4a83cccb68e475a83ae4d560e3794b158565a19bc&w=740',
-    title: 'Biology for Beginners',
-    description: 'Introduction to Biology and its branches...',
-    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-    time: '3 hours',
-    rating: 4.1,
-    ratingCount: 110,
-  },
-  {
-    image: 'https://img.freepik.com/premium-photo/thermometer-earth-eco-climate-change-concept-3d-rendering_35719-8004.jpg?w=740',
-    title: 'Earth Science',
-    description: 'Explore the basics of Earth Science...',
-    status: { title: 'Advanced', icon: <TbAntennaBars5 size={20} /> },
-    time: '6 hours',
-    rating: 4.6,
-    ratingCount: 85,
   },
   // other courses...
 ];
 
-function Science() {
+function Tech() {
   return (
     <div className="flex h-screen">
       <div className='z-40'>
@@ -156,13 +146,13 @@ function Science() {
               <li className="pr-4">
                 <Link to="/courses">Courses </Link>
               </li>
-              <li className="px-4 text-gray-700">Science</li>
+              <li className="px-4 text-gray-700">Technology</li>
             </ol>
           </nav>
-          <h2 className="text-2xl text-[#404660] font-medium mb-8">Science Courses</h2>
+          <h2 className="text-2xl text-[#404660] font-medium mb-8">Technology Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {coursesData.map((course, index) => (
-              <Link to={`/courses/science/${index}`} key={index}>
+              <Link to={`/courses/tech/${index}`} key={index}>
                 <CourseCard
                   image={course.image}
                   title={course.title}
@@ -181,4 +171,4 @@ function Science() {
   );
 }
 
-export default Science;
+export default Tech;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Card = ({ icon: Icon, bgColor, title, description, detailsLink, IbgColor, BtnBgcolor }) => {
   return (
@@ -15,16 +16,11 @@ const Card = ({ icon: Icon, bgColor, title, description, detailsLink, IbgColor, 
       </div>
       <hr className='my-3' />
       <div className={`flex items-center justify-between ${BtnBgcolor}`}>
-      <button
-        onClick={() => window.location.href = detailsLink}
-        className=" items-center  text-sm font-medium "
-      >
-        View Details
-        
-      </button>
-      <FaArrowRight className=' text-sm' />
+        <Link to={detailsLink} className="flex items-center text-sm font-medium">
+          View Details
+          <FaArrowRight className='text-sm ml-2' />
+        </Link>
       </div>
-     
     </div>
   );
 };

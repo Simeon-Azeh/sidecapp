@@ -6,78 +6,50 @@ import { MdDashboardCustomize, MdPeople, MdBook, MdSettings, MdHelp, MdMessage, 
 import { RiCompassDiscoverFill, RiArchiveDrawerFill } from "react-icons/ri";
 import { IoMdChatbubbles } from "react-icons/io";
 import Navbar from '../../components/Navbar';
-import { TbAntennaBars5, TbAntennaBars4} from 'react-icons/tb';
+import { TbAntennaBars5, TbAntennaBars4 } from 'react-icons/tb';
 import CourseCard from '../../components/Courses/CourseCard';
-import { GoHome } from "react-icons/go";
 
 const coursesData = [
+    {
+        image: 'https://img.freepik.com/premium-photo/abstract-background-molecules-technology-with-polygonal-shapes-connecting-dots-lines_7247-1132.jpg?w=740',
+        title: 'Mobile App Development',
+        description: 'Build your first mobile app with React Native...',
+        status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
+        time: '3 hours',
+        rating: 4.3,
+        ratingCount: 130,
+      },
   {
-    image: 'https://img.freepik.com/premium-photo/light-vintage-bulb-chalk-board-background_641298-22644.jpg?w=740',
-    title: 'Physics Basics',
-    description: 'Understand the fundamentals of Physics and apply...',
-    status: { title: 'Olevels', icon: <TbAntennaBars3 size={20} /> },
+    image: 'https://img.freepik.com/premium-photo/building-earth-coins-chart-3d-rendering-business-content_35719-1758.jpg?w=740',
+    title: 'Economics for Beginners',
+    description: 'Understand the basics of economics and apply in your...',
+    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
     time: '4 hours',
-    rating: 4.2,
-    ratingCount: 120,
+    rating: 4.5,
+    ratingCount: 90,
   },
   {
-    image: 'https://img.freepik.com/premium-photo/medical-science-blue-banner_978521-27821.jpg?w=826',
-    title: 'Chemistry Essentials',
-    description: 'Learn the basics of Chemistry and use it to prep for your...',
+    image: 'https://img.freepik.com/premium-photo/justice-scales-books-wooden-gavel-table-justice-concept_488220-74309.jpg?w=740',
+    title: 'Introduction to Law',
+    description: 'Explore the fundamentals of legal systems...',
     status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
     time: '5 hours',
-    rating: 4.5,
-    ratingCount: 95,
-  },
-  {
-    image: 'https://img.freepik.com/free-photo/3d-medical-background-with-virus-cells-dna-strand_1048-7596.jpg?t=st=1721764163~exp=1721767763~hmac=6d2c1c0a34bc80fae33115e4a83cccb68e475a83ae4d560e3794b158565a19bc&w=740',
-    title: 'Biology for Beginners',
-    description: 'Introduction to Biology and its branches...',
-    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-    time: '3 hours',
-    rating: 4.1,
-    ratingCount: 110,
-  },
-  {
-    image: 'https://img.freepik.com/premium-photo/thermometer-earth-eco-climate-change-concept-3d-rendering_35719-8004.jpg?w=740',
-    title: 'Earth Science',
-    description: 'Explore the basics of Earth Science...',
-    status: { title: 'Advanced', icon: <TbAntennaBars5 size={20} /> },
-    time: '6 hours',
-    rating: 4.6,
+    rating: 4.7,
     ratingCount: 85,
   },
   {
-    image: 'https://img.freepik.com/premium-photo/medical-science-blue-banner_978521-27821.jpg?w=826',
-    title: 'Chemistry Essentials',
-    description: 'Learn the basics of Chemistry and use it to prep for your...',
-    status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
-    time: '5 hours',
-    rating: 4.5,
-    ratingCount: 95,
-  },
-  {
-    image: 'https://img.freepik.com/free-photo/3d-medical-background-with-virus-cells-dna-strand_1048-7596.jpg?t=st=1721764163~exp=1721767763~hmac=6d2c1c0a34bc80fae33115e4a83cccb68e475a83ae4d560e3794b158565a19bc&w=740',
-    title: 'Biology for Beginners',
-    description: 'Introduction to Biology and its branches...',
-    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-    time: '3 hours',
-    rating: 4.1,
-    ratingCount: 110,
-  },
-  {
-    image: 'https://img.freepik.com/premium-photo/thermometer-earth-eco-climate-change-concept-3d-rendering_35719-8004.jpg?w=740',
-    title: 'Earth Science',
-    description: 'Explore the basics of Earth Science...',
+    image: 'https://img.freepik.com/free-photo/artist-props-photography-studio_23-2148885635.jpg?t=st=1721764748~exp=1721768348~hmac=69bbcd74fa092f2b9da142ecd41ca4f0928f40baf27ab26bb25b67b038844c54&w=360',
+    title: 'Photography Basics',
+    description: 'Understand the basics of photography and camera use...',
     status: { title: 'Advanced', icon: <TbAntennaBars5 size={20} /> },
     time: '6 hours',
-    rating: 4.6,
-    ratingCount: 85,
+    rating: 4.8,
+    ratingCount: 90,
   },
   // other courses...
 ];
 
-function Science() {
+function SavedCourses() {
   return (
     <div className="flex h-screen">
       <div className='z-40'>
@@ -156,13 +128,13 @@ function Science() {
               <li className="pr-4">
                 <Link to="/courses">Courses </Link>
               </li>
-              <li className="px-4 text-gray-700">Science</li>
+              <li className="px-4 text-gray-700">Saved</li>
             </ol>
           </nav>
-          <h2 className="text-2xl text-[#404660] font-medium mb-8">Science Courses</h2>
+          <h2 className="text-2xl text-[#404660] font-medium mb-8">Saved Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {coursesData.map((course, index) => (
-              <Link to={`/courses/science/${index}`} key={index}>
+              <Link to={`/courses/arts/${index}`} key={index}>
                 <CourseCard
                   image={course.image}
                   title={course.title}
@@ -181,4 +153,4 @@ function Science() {
   );
 }
 
-export default Science;
+export default SavedCourses;

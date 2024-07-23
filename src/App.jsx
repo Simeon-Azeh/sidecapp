@@ -8,6 +8,10 @@ import Dashboard from './pages/Dashboard';
 import Discover from './pages/Discover';
 import Courses from './pages/Courses/Courses';
 import Science from './pages/Courses/Science';
+import Tech from './pages/Courses/Technology';
+import Arts from './pages/Courses/Arts';
+import Specialization from './pages/Courses/Specialization';
+import SavedCourses from './pages/Courses/SavedCourses';
 
 
 function ScrollToTop() {
@@ -38,6 +42,10 @@ function App() {
        <Route path="/discover" element={<Discover/>} />
        <Route path="/courses" element={<Courses/>} />
        <Route path="/courses/science" element={<Science/>} />
+       <Route path="/courses/technology" element={<Tech/>} />
+       <Route path="/courses/arts" element={<Arts/>} />
+       <Route path="/courses/specialization" element={<Specialization/>} />
+       <Route path="/courses/saved" element={<SavedCourses/>} />
      </Routes>
      </BrowserRouter>
     </>
