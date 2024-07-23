@@ -51,8 +51,8 @@ const ResponsiveTable = () => {
                 <td className="py-4 px-4 flex items-center">
                   {course.icon}
                   <div className="ml-4">
-                    <h1 className="font-medium text-[#404660]">{course.title}</h1>
-                    <div className="text-gray-500 text-sm">{course.description}</div>
+                    <h1 className="font-medium text-[#404660] text-sm md:text-[16px]">{course.title}</h1>
+                    <div className="text-gray-500 text-sm hidden md:block">{course.description}</div>
                   </div>
                 </td>
                 <td className="py-4 px-4">
