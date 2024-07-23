@@ -70,7 +70,7 @@ const CommunityLeaderboard = () => {
           <tr className='text-gray-400'>
             <th className="py-2 px-4 font-medium text-[14px] ">Rank</th>
             <th className="py-2 px-4 font-medium text-[14px]">Member</th>
-            <th className="py-2 px-4 font-medium text-[14px]">Completed Courses</th>
+            <th className="py-2 px-4 font-medium text-[14px]">Courses</th>
             <th className="py-2 px-4 font-medium  text-[14px]">Hours</th>
             <th className="py-2 px-4 font-medium text-[14px]">Score</th>
           </tr>
