@@ -66,7 +66,7 @@ function Sidebar({ children }) {
       <div className="border-t flex p-3 relative mt-auto">
         <img src={ProfileAvatar} className="w-12 h-12 rounded-full" alt="" />
         <div
-          className={`flex justify-between items-center ml-3 overflow-hidden transition-all ${expanded ? "w-52" : "w-0"}`}
+          className={`flex justify-between  items-center ml-3 overflow-hidden transition-all ${expanded ? "w-52" : "w-0"}`}
         >
           <div className="leading-5">
             <h4 className="text-gray-500 font-semibold">Simeon Azeh</h4>
