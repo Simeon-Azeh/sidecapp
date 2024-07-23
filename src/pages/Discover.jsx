@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import GreetingCard from '../components/Discover/GreetingCard';
 import { Calendar, theme } from 'antd';
 import UpcomingToday from '../components/Discover/UpcomingToday';
+import CommunityLeaderboard from '../components/Discover/CommunityLeaderboard';
 const onPanelChange = (value, mode) => {
   console.log(value.format('YYYY-MM-DD'), mode);
 };
@@ -120,7 +121,7 @@ function Discover() {
            <GreetingCard />
           </div>
          <div>
-        <ResponsiveTable />
+       <CommunityLeaderboard />
          </div>
             </div>
             <div className='w-full px-7 mt-5 md:mt-0 md:px-0 md:w-[30%]'>
