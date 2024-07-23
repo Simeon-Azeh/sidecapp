@@ -88,7 +88,7 @@ function Specialization() {
             <Link to="/courses/science">
               <DropdownItem text="Science" />
             </Link>
-            <Link to="/courses/tech">
+            <Link to="/courses/technology">
               <DropdownItem text="Technology" />
             </Link>
             <Link to="/courses/specialization">

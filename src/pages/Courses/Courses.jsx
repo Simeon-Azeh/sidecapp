@@ -8,8 +8,6 @@ import { MdOutlineDatasetLinked } from "react-icons/md";
 import Navbar from '../../components/Navbar';
 import { FaBook, FaChalkboardTeacher, FaCertificate } from 'react-icons/fa';
 import Card from '../../components/Dashboard/Card';
-import ProfileContainer from '../../components/Dashboard/ProfileContainer';
-import ResponsiveTable from '../../components/Dashboard/ResponsiveTable';
 import CourseList from '../../components/Courses/CourseList';
 import { Link } from 'react-router-dom';
 import CourseCategories from '../../components/Courses/CourseCategories';
@@ -63,7 +61,7 @@ function Courses() {
         <Link to="/tutors/arts">
           <DropdownItem text="Arts" />
         </Link>
-        <Link to="/tutors/tech">
+        <Link to="/tutors/technology">
           <DropdownItem text="Tech" />
         </Link>
         <Link to="/tutors/specialization">

@@ -105,7 +105,7 @@ function Arts() {
             <Link to="/tutors/arts">
               <DropdownItem text="Arts" />
             </Link>
-            <Link to="/tutors/tech">
+            <Link to="/tutors/technology">
               <DropdownItem text="Tech" />
             </Link>
             <Link to="/tutors/specialization">
