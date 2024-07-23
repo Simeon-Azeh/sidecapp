@@ -87,7 +87,7 @@ function Dashboard() {
             </div>
       
         </div>
-        <div className='w-full px-4 pl-12'>
+        <div className='w-full px-4 md:pl-12 pl-9 pr-9 md:pr-4'>
             <CourseList />
         </div>
       </div>

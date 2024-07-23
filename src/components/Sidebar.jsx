@@ -92,7 +92,7 @@ function Sidebar({ children }) {
   return (
     <>
       {/* Show toggle button on small screens only */}
-      <button className="md:hidden text-[22px]  fixed top-4 left-6 text-[#404660] z-20 rounded" onClick={toggleDrawer}>
+      <button className="md:hidden text-[22px]  fixed top-5 bg-white rounded p-1 left-6 text-[#404660] z-20 rounded" onClick={toggleDrawer}>
         <MenuOutlined size={30} />
       </button>
       <Drawer
