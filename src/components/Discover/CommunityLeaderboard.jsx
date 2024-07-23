@@ -58,12 +58,14 @@ const leaderboardData = [
 
 const CommunityLeaderboard = () => {
   return (
-    <div className="overflow-x-auto bg-white mt-6 rounded-md border font-poppins pb-4 ">
-        <div className='flex items-center justify-between '>
-        <h1 className='text-[16px] font-semibold text-[#404660] p-4'>Community Leaderboard</h1>
-            <a href="#" className='text-[14px] font-medium text-[#404660] px-4 border mr-5 rounded'>Join</a>
+    <div>
+         <div className='flex items-center justify-between '>
+        <h1 className='text-[16px] font-semibold text-[#404660] py-4'>Community Leaderboard</h1>
+            <a href="#" className='text-[14px] font-medium text-[#404660] px-4 border  rounded'>Join</a>
         </div>
-      <table className="w-full  ">
+          <div className=" bg-white  rounded-md overflow-x-auto  border font-poppins pb-4 ">
+       
+      <table className="w-full ">
         <thead>
           <tr className='text-gray-400'>
             <th className="py-2 px-4 font-medium text-[14px] ">Rank</th>
@@ -108,6 +110,8 @@ const CommunityLeaderboard = () => {
         </tbody>
       </table>
     </div>
+    </div>
+  
   );
 };
 
