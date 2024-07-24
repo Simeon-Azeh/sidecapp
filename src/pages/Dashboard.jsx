@@ -92,7 +92,7 @@ function Dashboard() {
                 bgColor="border-[#9835ff] border bg-white"
                 title="6"
                 description="Enrolled Courses"
-                detailsLink="/courses"
+                detailsLink="/courses/enrolled"
                 IbgColor="bg-[#9835ff] text-white"
                 BtnBgcolor="text-[#9835ff]"
               />
