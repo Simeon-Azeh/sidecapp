@@ -82,9 +82,9 @@ function Navbar() {
        
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-60 p-2 bg-white border rounded-lg shadow-lg z-10">
-                <p className="text-gray-600  font-medium ">Simeon Azeh<span className="text-[#9835ff] border px-2 rounded ml-2">Free plan</span></p>
+                <p className="text-gray-600  font-medium ">Student<span className="text-[#9835ff] border px-2 rounded ml-2">Beta user</span></p>
               <button className="w-full text-left text-[#9835ff]  p-2 hover:bg-gray-100">
-               Upgrade
+               Switch to tutor
               </button>
               <hr />
               <button className="w-full text-[#9835ff]  p-2 hover:bg-gray-100 flex items-center gap-2" onClick={toggleLanguageDropdown}>

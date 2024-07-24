@@ -10,6 +10,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const SidebarContext = createContext();
 
@@ -79,7 +80,9 @@ function Sidebar({ children }) {
         {actionsVisible && (
           <div className="absolute right-0 bottom-12 w-48 bg-white border rounded shadow-lg p-4">
             <ul className="text-gray-500 ">
+              <Link to="/settings">
               <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b flex items-center gap-x-2"><CgProfile /> View Profile</li>
+              </Link>
               <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b flex items-center gap-x-2"> <IoSettingsOutline /> Settings</li>
               <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-400 flex items-center gap-x-2"><AiOutlineLogin /> Log Out</li>
             </ul>
