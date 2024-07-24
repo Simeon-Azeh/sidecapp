@@ -110,7 +110,7 @@ function Dashboard() {
                 bgColor="bg-white border"
                 title="2"
                 description="Certificates"
-                detailsLink="/certificates"
+                detailsLink="/courses/enrolled/certificates"
                 IbgColor="bg-fuchsia-500 text-white"
                 BtnBgcolor="text-gray-400"
               />

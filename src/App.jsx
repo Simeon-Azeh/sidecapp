@@ -13,6 +13,7 @@ import Arts from './pages/Courses/Arts';
 import Specialization from './pages/Courses/Specialization';
 import SavedCourses from './pages/Courses/SavedCourses';
 import EnrolledCourses from './pages/Courses/EnrolledCourses';
+import Certificates from './pages/Courses/Certificates';
 
 
 function ScrollToTop() {
@@ -49,6 +50,7 @@ function App() {
        <Route path="/courses/specialization" element={<Specialization/>} />
        <Route path="/courses/saved" element={<SavedCourses/>} />
        <Route path="/courses/enrolled" element={<EnrolledCourses/>} />
+       <Route path="/courses/enrolled/certificates" element={<Certificates/>} />
      </Routes>
      </BrowserRouter>
     </>
