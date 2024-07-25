@@ -103,7 +103,7 @@ function Settings() {
             </div>
             <div className="flex-1 bg-white p-4 border rounded-md">
                 <h1 className='text-lg font-medium text-[#404660] mb-4'>Profile Settings</h1>
-              <div className="flex mb-4">
+              <div className="flex flex-col md:flex-row mb-4">
                 {tabs.map((tab, index) => (
                   <button
                     key={index}

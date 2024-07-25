@@ -33,7 +33,7 @@ function ProfileDetails() {
      </div>
      <div>
         <h1 className='text-[16px] font-medium text-[#404660] mb-2'>Badges</h1>
-        <div className='flex justify-between items-center gap-6'>
+        <div className='flex justify-between items-center gap-3 md:gap-6'>
            <div className='w-16 bg-[#fff7cd] p-2 py-2.5  rounded-full h-16 cursor-pointer hover:scale-105 duration-300 '>
             <img src={awardone} alt="" className='w-full object-contain cursor-pointer hover:scale-105 duration-300' />
             </div> 
@@ -55,7 +55,7 @@ function ProfileDetails() {
         <div className='space-y-4'>
             <div className='flex items-center gap-3'>
             <FaChalkboardTeacher size={30} className='text-[#9835ff] bg-slate-50 p-2 w-8 h-8 rounded' />
-            <p className='text-[#404660] text-[16px] font-medium cursor-pointer border px-4 py-1 rounded hover:translate-y-[-3px] duration-300'>Become a Tutor</p>
+            <p className=' text-[#404660] text-[16px] font-medium cursor-pointer border px-4 py-1 rounded hover:translate-y-[-3px] duration-300'>Become a Tutor</p>
             </div>
             <div className='flex items-center gap-2'>
             <MdHelp size={30} className='text-emerald-400 bg-slate-50 p-2 w-8 h-8 rounded'  />
