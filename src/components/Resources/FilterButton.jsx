@@ -1,23 +1,28 @@
 // src/components/FilterButton.jsx
 import React, { useState } from 'react';
-import { DatePicker, Select } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
+import { DatePicker, Select, Spin } from 'antd';
 import { IoIosArrowDown } from "react-icons/io";
+import moment from 'moment';
 
-const { RangePicker } = DatePicker;
 const { Option } = Select;
 
 const FilterButton = ({ onFilter }) => {
   const [filters, setFilters] = useState({
-    yearRange: [],
+    startYear: null,
+    endYear: null,
     discipline: '',
     subject: '',
     paper: ''
   });
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleDateChange = (dates) => {
-    setFilters(prev => ({ ...prev, yearRange: dates }));
+  const handleStartYearChange = (date) => {
+    setFilters(prev => ({ ...prev, startYear: date ? date.year() : null }));
+  };
+
+  const handleEndYearChange = (date) => {
+    setFilters(prev => ({ ...prev, endYear: date ? date.year() : null }));
   };
 
   const handleDisciplineChange = (value) => {
@@ -33,7 +38,9 @@ const FilterButton = ({ onFilter }) => {
   };
 
   const handleFilterApply = () => {
+    setLoading(true);
     onFilter(filters);
+    setLoading(false);
     setDropdownVisible(false); // Close the dropdown on apply
   };
 
@@ -46,9 +53,22 @@ const FilterButton = ({ onFilter }) => {
         Filter <IoIosArrowDown className="ml-1" />
       </button>
       {dropdownVisible && (
-        <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-300 border-solid rounded-lg shadow-lg z-50 p-4">
+        <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-300 border-solid rounded-lg shadow-lg z-10 p-4">
           <div className="mb-4">
-            <RangePicker onChange={handleDateChange} style={{ width: '100%' }} />
+            <DatePicker 
+              picker="year" 
+              placeholder="Start Year" 
+              onChange={handleStartYearChange} 
+              style={{ width: '100%' }} 
+            />
+          </div>
+          <div className="mb-4">
+            <DatePicker 
+              picker="year" 
+              placeholder="End Year" 
+              onChange={handleEndYearChange} 
+              style={{ width: '100%' }} 
+            />
           </div>
           <div className="mb-4">
             <Select 
@@ -88,9 +108,10 @@ const FilterButton = ({ onFilter }) => {
           </div>
           <div className="flex justify-end">
             <button 
-              className="px-4 py-2 bg-[#9835ff] text-white rounded" 
+              className="px-4 py-2 bg-[#9835ff] text-white rounded flex items-center" 
               onClick={handleFilterApply}
             >
+              {loading ? <Spin className="mr-2" /> : null}
               Apply Filters
             </button>
           </div>

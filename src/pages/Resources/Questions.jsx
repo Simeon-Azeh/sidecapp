@@ -65,7 +65,7 @@ function Questions() {
           <Link to="/dashboard">
             <SidebarItem icon={<MdDashboardCustomize size={20} />} text="Dashboard" alert />
           </Link>
-          <SidebarItem icon={<MdBook size={20} />} text="Courses" active>
+          <SidebarItem icon={<MdBook size={20} />} text="Courses" >
             <Link to="/courses">
               <DropdownItem text="All" />
             </Link>
@@ -82,7 +82,7 @@ function Questions() {
               <DropdownItem text="Specialization" />
             </Link>
           </SidebarItem>
-          <SidebarItem icon={<RiArchiveDrawerFill size={20} />} text="Resources">
+          <SidebarItem icon={<RiArchiveDrawerFill size={20} />} text="Resources" active>
             <Link to="/resources">
               <DropdownItem text="All" />
             </Link>
