@@ -18,6 +18,8 @@ import Profile from './pages/Settings';
 import Settings from './pages/Settings';
 import Resources from './pages/Resources/Resources';
 import Questions from './pages/Resources/Questions';
+import Solutions from './pages/Resources/Solutions';
+import TestPage from './pages/Resources/Test';
 
 
 function ScrollToTop() {
@@ -57,6 +59,8 @@ function App() {
        <Route path="/courses/enrolled/certificates" element={<Certificates/>} />
        <Route path="/resources" element={<Resources/>} />
        <Route path="/resources/questions" element={<Questions/>} />
+       <Route path="/resources/solutions" element={<Solutions/>} />
+       <Route path="/resources/tests" element={<TestPage/>} />
        <Route path="/settings" element={<Settings/>} />
      </Routes>
      </BrowserRouter>
