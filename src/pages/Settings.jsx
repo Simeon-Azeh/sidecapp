@@ -20,7 +20,7 @@ const tabs = [
 
 function Settings() {
   const [activeTab, setActiveTab] = useState(0);
-
+  document.title="Settings";
   return (
     <div className="flex h-screen">
       <div className='z-40'>

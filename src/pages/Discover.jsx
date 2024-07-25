@@ -40,6 +40,8 @@ function Discover() {
         'Chapter 3: Advanced Topics',
         'Chapter 4: Conclusion',
       ];
+
+      document.title = 'Discover | sidec';
   return (
     <div className="flex h-screen">
         <div className='z-40'>

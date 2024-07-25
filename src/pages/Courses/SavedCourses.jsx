@@ -50,6 +50,7 @@ const coursesData = [
 ];
 
 function SavedCourses() {
+  document.title = " Courses - Saved Courses";
   return (
     <div className="flex h-screen">
       <div className='z-40'>

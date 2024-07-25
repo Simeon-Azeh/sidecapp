@@ -78,6 +78,7 @@ const coursesData = [
 ];
 
 function Science() {
+  document.title = " Courses - Science";
   return (
     <div className="flex h-screen">
       <div className='z-40'>

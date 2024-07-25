@@ -60,6 +60,8 @@ const Onboarding = () => {
     setFormData({ ...formData, verificationCode: updatedCode });
   };
 
+  document.title = " Getting started with sidec";
+
   return (
     <div>
     <div className="min-h-screen flex flex-col items-center justify-center bg-white ">

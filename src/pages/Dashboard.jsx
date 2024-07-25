@@ -12,6 +12,7 @@ import CourseList from '../components/Courses/CourseList';
 import { Link } from 'react-router-dom';
 
 function Dashboard() {
+  document.title = "Sidec dashboard";
   return (
     <div className="flex h-screen">
       <div className='z-40'>

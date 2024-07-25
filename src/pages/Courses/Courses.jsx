@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import CourseCategories from '../../components/Courses/CourseCategories';
 
 function Courses() {
+  document.title = " Courses - sidec";
   return (
     <div className="flex h-screen">
         <div className='z-40'>

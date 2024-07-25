@@ -67,7 +67,9 @@ const coursesData = [
   // other courses...
 ];
 
+
 function Tech() {
+  document.title='Courses - Technology';
   return (
     <div className="flex h-screen">
       <div className='z-40'>

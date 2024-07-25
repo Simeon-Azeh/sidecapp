@@ -30,7 +30,7 @@ function Landing() {
     });
   }, []);
 
- 
+ document.title = "welcome to sidec";
   return (
     <div>
              <div className='min-h-screen flex items-center justify-between md:w-4/5 m-auto font-poppins'>

@@ -88,6 +88,7 @@ const courses = [
 ];
 
 function EnrolledCourses() {
+    document.title = " Courses - Enrolled Courses";
   return (
     <div className="flex h-screen">
       <div className='z-40'>

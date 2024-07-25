@@ -58,7 +58,7 @@ function Register() {
   if (loading) {
     return <AmazonLoader />;
   }
-
+  document.title = " Register with sidec";
   return (
     <div className="w-full md:w-4/5 mx-auto md:py-8 md:px-0 font-poppins">
       <div className="flex flex-col md:flex-row items-center bg-white p-8 md:rounded-lg border">

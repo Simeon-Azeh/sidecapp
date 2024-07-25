@@ -27,6 +27,7 @@ const certificates = [
 ];
 
 function Certificates() {
+    document.title = " Courses - Certificates";
   return (
     <div className="flex h-screen">
       <div className='z-40'>

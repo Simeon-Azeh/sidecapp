@@ -53,6 +53,8 @@ function Questions() {
     // Add logic to filter ResourceData based on filters
   };
 
+  document.title = "Questions - Sidec";
+
   return (
     <div className="flex h-screen">
       <div className='z-40'>

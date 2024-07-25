@@ -14,6 +14,7 @@ import CourseCategories from '../../components/Courses/CourseCategories';
 import ResourceCategories from '../../components/Resources/ResourceCategories';
 
 function Resources() {
+    document.title="Resources";
   return (
     <div className="flex h-screen">
         <div className='z-40'>
