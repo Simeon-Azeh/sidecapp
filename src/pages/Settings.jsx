@@ -6,15 +6,15 @@ import { RiCompassDiscoverFill, RiArchiveDrawerFill } from "react-icons/ri";
 import { IoMdChatbubbles } from "react-icons/io";
 import Navbar from '../components/Navbar';
 import ProfileDetails from '../components/settings/ProfileDetails';
-import Notifications from '../components/settings/Notifications';
-import Privacy from '../components/settings/Privacy';
 import Payment from '../components/settings/Payment';
 import ProfileDetab from '../components/settings/ProfileDetab';
+import Preferences from '../components/settings/Preferences';
+import Security from '../components/settings/Security';
 
 const tabs = [
  { name: 'Profile Details', component: <ProfileDetab /> },
-  { name: 'General', component: <Notifications /> },
-  { name: 'Security', component: <Payment /> },
+  { name: 'Preferences', component: <Preferences/> },
+  { name: 'Security', component: <Security /> },
   { name: 'Payment', component: <Payment /> },
 ];
 
