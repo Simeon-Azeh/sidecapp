@@ -11,8 +11,9 @@ import Card from '../../components/Dashboard/Card';
 import CourseList from '../../components/Courses/CourseList';
 import { Link } from 'react-router-dom';
 import CourseCategories from '../../components/Courses/CourseCategories';
+import ResourceCategories from '../../components/Resources/ResourceCategories';
 
-function Courses() {
+function Resources() {
   return (
     <div className="flex h-screen">
         <div className='z-40'>
@@ -24,7 +25,7 @@ function Courses() {
             <SidebarItem icon={<MdDashboardCustomize size={20} />} text="Dashboard"  alert/>
             </Link>
             
-            <SidebarItem icon={<MdBook size={20} />} text="Courses" active>
+            <SidebarItem icon={<MdBook size={20} />} text="Courses" >
             <Link to="/courses">
             <DropdownItem text="All" />
             </Link>
@@ -43,7 +44,7 @@ function Courses() {
         </SidebarItem>
           
       
-        <SidebarItem icon={<RiArchiveDrawerFill size={20} />} text="Resources">
+        <SidebarItem icon={<RiArchiveDrawerFill size={20} />} text="Resources" active>
         <Link to="/resources">
           <DropdownItem text="All" />
         </Link>
@@ -94,7 +95,7 @@ function Courses() {
         </div>
         
         <div className='w-full mx-auto md:pl-9 '>
-           <CourseCategories />
+           <ResourceCategories/>
         </div>
       </div>
       
@@ -102,4 +103,4 @@ function Courses() {
   );
 }
 
-export default Courses;
+export default Resources;

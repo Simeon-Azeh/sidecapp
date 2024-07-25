@@ -1,65 +1,58 @@
+// src/pages/Questions.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TbAntennaBars3 } from 'react-icons/tb';
+import { TbAntennaBars3, TbAntennaBars4, TbAntennaBars5 } from 'react-icons/tb';
 import Sidebar, { SidebarItem, DropdownItem } from '../../components/Sidebar';
 import { MdDashboardCustomize, MdPeople, MdBook, MdSettings, MdHelp, MdMessage, MdOutlineDatasetLinked } from 'react-icons/md';
 import { RiCompassDiscoverFill, RiArchiveDrawerFill } from "react-icons/ri";
 import { IoMdChatbubbles } from "react-icons/io";
 import Navbar from '../../components/Navbar';
-import { TbAntennaBars5, TbAntennaBars4 } from 'react-icons/tb';
-import CourseCard from '../../components/Courses/CourseCard';
+import ResourcesCard from '../../components/Resources/ResourcesCard';
+import FilterButton from '../../components/Resources/FilterButton';
 
-const coursesData = [
-  {
-    image: 'https://img.freepik.com/free-photo/painting-art-tools-painting-supplies-palette-brushes-paint_146671-18490.jpg',
-    title: 'Introduction to Painting',
-    description: 'Learn the basics of painting and create your first masterpiece...',
-    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-    time: '5 hours',
-    rating: 4.3,
-    ratingCount: 90,
-  },
- 
-  {
-    image: 'https://img.freepik.com/free-photo/vintage-desk-concept-with-copyspace-right_23-2147791060.jpg?t=st=1721764493~exp=1721768093~hmac=0659d110ff4a0fc5f81a3ecf3de8af7abdd29a769ebba77516b5949e2e7f20eb&w=740',
-    title: 'History of Art',
-    description: 'Dive into the history and evolution of art...',
-    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-    time: '4 hours',
-    rating: 4.3,
-    ratingCount: 78,
-  },
-  {
-    image: 'https://img.freepik.com/free-photo/radio-concept-with-microphone-copy-space_23-2148681165.jpg?t=st=1721764579~exp=1721768179~hmac=875474cec38e09c4959c14a348a6f3c8b7526f81dca5c607b823f64b797723d4&w=740',
-    title: 'Music Theory',
-    description: 'Learn the fundamental concepts of music theory...',
-    status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
-    time: '5 hours',
-    rating: 4.7,
-    ratingCount: 65,
-  },
-  {
-    image: 'https://img.freepik.com/premium-photo/blank-chalkboard-with-curtains_780608-3337.jpg?w=740',
-    title: 'Introduction to Theatre',
-    description: 'An overview of theatre history and practice...',
-    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-    time: '3 hours',
-    rating: 4.4,
-    ratingCount: 72,
-  },
-  {
-    image: 'https://img.freepik.com/free-photo/artist-props-photography-studio_23-2148885635.jpg?t=st=1721764748~exp=1721768348~hmac=69bbcd74fa092f2b9da142ecd41ca4f0928f40baf27ab26bb25b67b038844c54&w=360',
-    title: 'Photography Basics',
-    description: 'Understand the basics of photography and camera use...',
-    status: { title: 'Advanced', icon: <TbAntennaBars5 size={20} /> },
-    time: '6 hours',
-    rating: 4.8,
-    ratingCount: 90,
-  },
-  // other courses...
+const ResourceData = [
+    {
+        image: 'https://img.freepik.com/free-psd/3d-rendering-questions-background_23-2151455632.jpg?t=st=1721900388~exp=1721903988~hmac=767788fc2c2b6c7e4e99e6a62cc54cb29f188c038ebb89e60cfc5f954e0d5d54&w=740',
+        title: 'Physics II',
+        description: 'GCE 2024',
+        status: { title: 'ALEVELS', icon: <TbAntennaBars4 size={20} /> },
+        rating: 4.2,
+        ratingCount: 120,
+      },
+      {
+        image: 'https://img.freepik.com/free-psd/3d-rendering-questions-background_23-2151455632.jpg?t=st=1721900388~exp=1721903988~hmac=767788fc2c2b6c7e4e99e6a62cc54cb29f188c038ebb89e60cfc5f954e0d5d54&w=740',
+        title: 'Chemistry I',
+        description: 'WAEC 2024',
+        status: { title: 'ALEVELS', icon: <TbAntennaBars4 size={20} /> },
+        rating: 4.5,
+        ratingCount: 95,
+      },
+      {
+        image: 'https://img.freepik.com/free-psd/3d-rendering-questions-background_23-2151455632.jpg?t=st=1721900388~exp=1721903988~hmac=767788fc2c2b6c7e4e99e6a62cc54cb29f188c038ebb89e60cfc5f954e0d5d54&w=740',
+        title: 'Biology II',
+        description: 'GCE 2024',
+        status: { title: 'OLEVELS', icon: <TbAntennaBars3 size={20} /> },
+        time: '3 hours',
+        rating: 4.1,
+        ratingCount: 110,
+      },
+      {
+        image: 'https://img.freepik.com/free-psd/3d-rendering-questions-background_23-2151455632.jpg?t=st=1721900388~exp=1721903988~hmac=767788fc2c2b6c7e4e99e6a62cc54cb29f188c038ebb89e60cfc5f954e0d5d54&w=740',
+        title: 'Computer Science',
+        description: 'HND 2024',
+        status: { title: 'Advanced', icon: <TbAntennaBars5 size={20} /> },
+        time: '6 hours',
+        rating: 4.6,
+        ratingCount: 85,
+      },
 ];
 
-function Arts() {
+function Questions() {
+  const handleFilter = (filters) => {
+    console.log(filters);
+    // Add logic to filter ResourceData based on filters
+  };
+
   return (
     <div className="flex h-screen">
       <div className='z-40'>
@@ -80,7 +73,7 @@ function Arts() {
             <Link to="/courses/science">
               <DropdownItem text="Science" />
             </Link>
-            <Link to="/courses/tech">
+            <Link to="/courses/technology">
               <DropdownItem text="Technology" />
             </Link>
             <Link to="/courses/specialization">
@@ -88,9 +81,9 @@ function Arts() {
             </Link>
           </SidebarItem>
           <SidebarItem icon={<RiArchiveDrawerFill size={20} />} text="Resources">
-          <Link to="/resources">
-          <DropdownItem text="All" />
-        </Link>
+            <Link to="/resources">
+              <DropdownItem text="All" />
+            </Link>
             <Link to="/resources/questions">
               <DropdownItem text="Questions" />
             </Link>
@@ -108,7 +101,7 @@ function Arts() {
             <Link to="/tutors/arts">
               <DropdownItem text="Arts" />
             </Link>
-            <Link to="/tutors/technology">
+            <Link to="/tutors/tech">
               <DropdownItem text="Tech" />
             </Link>
             <Link to="/tutors/specialization">
@@ -136,26 +129,27 @@ function Arts() {
           <Navbar />
         </div>
         <div className='w-full mx-auto md:pl-16 font-poppins p-4 px-6'>
-          <nav className="mb-4" aria-label="breadcrumb">
+          <nav className="mb-4 flex justify-between items-center" aria-label="breadcrumb">
             <ol className="flex leading-none text-[#9835ff] divide-x divide-indigo-400">
               <li className="pr-4">
-                <Link to="/courses">Courses </Link>
+                <Link to="/resources">Resources </Link>
               </li>
-              <li className="px-4 text-gray-700">Arts</li>
+              <li className="px-4 text-gray-700">Questions</li>
             </ol>
+            <FilterButton onFilter={handleFilter} />
           </nav>
-          <h2 className="text-2xl text-[#404660] font-medium mb-8">Arts Courses</h2>
+          <h2 className="text-2xl text-[#404660] font-medium mb-8">Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {coursesData.map((course, index) => (
-              <Link to={`/courses/arts/${index}`} key={index}>
-                <CourseCard
-                  image={course.image}
-                  title={course.title}
-                  description={course.description}
-                  status={course.status}
-                  time={course.time}
-                  rating={course.rating}
-                  ratingCount={course.ratingCount}
+            {ResourceData.map((resource, index) => (
+              <Link to={`/courses/science/${index}`} key={index}>
+                <ResourcesCard
+                  image={resource.image}
+                  title={resource.title}
+                  description={resource.description}
+                  status={resource.status}
+                  time={resource.time}
+                  rating={resource.rating}
+                  ratingCount={resource.ratingCount}
                 />
               </Link>
             ))}
@@ -166,4 +160,4 @@ function Arts() {
   );
 }
 
-export default Arts;
+export default Questions;

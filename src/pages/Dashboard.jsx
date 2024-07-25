@@ -40,6 +40,9 @@ function Dashboard() {
             </Link>
           </SidebarItem>
           <SidebarItem icon={<RiArchiveDrawerFill size={20} />} text="Resources">
+          <Link to="/resources">
+          <DropdownItem text="All" />
+        </Link>
             <Link to="/resources/questions">
               <DropdownItem text="Questions" />
             </Link>
