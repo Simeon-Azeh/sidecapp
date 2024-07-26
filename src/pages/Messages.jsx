@@ -8,6 +8,8 @@ import { IoMdChatbubbles } from "react-icons/io";
 import TeamsSection from '../components/Messages/TeamsSection';
 import ChatCard from '../components/Messages/ChatCard';
 import MessagingSection from '../components/Messages/MessagingSection';
+import SharedPhotos from '../components/Messages/SharedPhotos';
+import SharedFiles from '../components/Messages/SharedFiles';
 
 
 const chatData = [
@@ -169,12 +171,10 @@ const Messages = () => {
             {/* Second Container: Messaging Section */}
             <MessagingSection selectedChat={selectedChat} />
 
-            {/* Third Container: Placeholder for additional content */}
+            {/* Third Container: Shared Photos and Files */}
             <div className="bg-white p-4 border rounded w-1/4">
-              <div className="bg-white border rounded-lg p-4 mb-4">
-                <h2 className="text-xl font-semibold text-[#404660] mb-2">Additional Content</h2>
-                <p>Placeholder for additional content.</p>
-              </div>
+              <SharedPhotos />
+              <SharedFiles />
             </div>
           </div>
         </div>
