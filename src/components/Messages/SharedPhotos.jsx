@@ -13,7 +13,7 @@ const SharedPhotos = () => {
     <div className="overflow-hidden rounded-lg">
       <h2 className="text-xl font-medium text-[#404660] mb-2">Shared Photos</h2>
       <div className="relative">
-        <div className="grid grid-cols-2 gap-1 mb-4 py-2 px-4">
+        <div className="grid grid-cols-3 md:grid-cols-2 gap-0 md:gap-1 mb-4 py-2 px-4">
           {photos.slice(0, 3).map((photo, index) => (
             <div key={index} className="relative w-20 h-20 flex-shrink-0">
               <img

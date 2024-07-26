@@ -143,9 +143,9 @@ const Messages = () => {
           <Navbar />
         </div>
         <div className="w-full mx-auto md:pl-16 font-poppins p-4 px-6">
-          <div className="flex gap-2 h-screen">
+          <div className="flex flex-col md:flex-row gap-2 h-screen">
             {/* First Container: Teams Section and Chat Cards */}
-            <div className="bg-white p-4 border rounded w-1/3">
+            <div className="bg-white p-4 border rounded w-full md:w-1/3">
               <div className="mb-2">
                 <TeamsSection />
               </div>
@@ -169,10 +169,13 @@ const Messages = () => {
             </div>
 
             {/* Second Container: Messaging Section */}
+            <div className='bg-white p-4 border rounded w-full md:w-2/3'>
             <MessagingSection selectedChat={selectedChat} />
 
+            </div>
+          
             {/* Third Container: Shared Photos and Files */}
-            <div className="bg-white p-4 border rounded w-1/4">
+            <div className="bg-white p-4 border rounded w-full md:w-2/4">
               <SharedPhotos />
               <SharedFiles />
             </div>

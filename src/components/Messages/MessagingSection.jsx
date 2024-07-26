@@ -6,7 +6,7 @@ import TypingEffect from './TypingEffect';
 import avartarone from '../../../public/images/avatartwo.avif';
 
 const MessagingSection = ({ selectedChat }) => (
-  <div className="bg-white border rounded p-4 w-2/5 flex flex-col">
+  <div className="h-full flex flex-col">
     <div className="flex items-center justify-between border-b pb-2 mb-4">
       <div className="flex items-center gap-2">
         <img src={selectedChat.profilePicture} alt={selectedChat.name} className="w-10 h-10 rounded-full object-cover" />
