@@ -1,33 +1,44 @@
-// src/pages/Certificates.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { TbAntennaBars3 } from 'react-icons/tb';
 import Sidebar, { SidebarItem, DropdownItem } from '../../components/Sidebar';
-import { MdDashboardCustomize, MdPeople, MdBook, MdSettings, MdHelp, MdOutlineDatasetLinked } from 'react-icons/md';
+import { MdDashboardCustomize, MdPeople, MdBook, MdSettings, MdHelp, MdMessage, MdOutlineDatasetLinked } from 'react-icons/md';
 import { RiCompassDiscoverFill, RiArchiveDrawerFill } from "react-icons/ri";
-import { IoMdChatbubbles } from 'react-icons/io';
+import { IoMdChatbubbles } from "react-icons/io";
 import Navbar from '../../components/Navbar';
-import CertificateCard from '../../components/Courses/CertificateCard';
+import { TbAntennaBars5, TbAntennaBars4} from 'react-icons/tb';
 
+import { GoHome } from "react-icons/go";
+import TutorCard from '../../components/Tutors/TutorCard';
+import FilterButton from '../../components/Tutors/FilterButton';
 
-const certificates = [
-  {
-    title: 'React Development',
-    issuer: 'Coursera',
-    date: 'June 2024',
-    certificateLink: '/certificates/react-development',
-    grade: 'B+',
-  },
-  {
-    title: 'Data Science',
-    issuer: 'edX',
-    date: 'May 2024',
-    certificateLink: '/certificates/data-science',
-    grade: 'A',
-  },
+const tutorsData = [
+    {
+        image: 'https://img.freepik.com/free-photo/front-view-man-looking-away_23-2148291498.jpg?t=st=1721981282~exp=1721984882~hmac=92e2b1f706ecc4e5340c709ed4f189adfcb0d28d131f6bfe51a557cafab8923e&w=360',
+        title: 'Simeon Kongnyuy',
+        description: 'HTML | CSS | Javascript',
+        status: { title: 'Beginners', icon: <TbAntennaBars3 size={20} /> },
+        time: '2 hours',
+        rating: 4.2,
+        ratingCount: 150,
+      },
+      {
+        image: 'https://img.freepik.com/free-photo/portrait-smiling-african-american-entrepreneur-man-browsing-management-information_482257-22673.jpg?t=st=1721981233~exp=1721984833~hmac=c1673ee9b9a8918d25a487bba542e1a01f9c9491826226a26d1d66cefc750331&w=360',
+        title: 'Alain Michael',
+        description: 'Python | Java | C++',
+        status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
+        time: '5 hours',
+        rating: 4.6,
+        ratingCount: 140,
+      },
+     
 ];
-
-function Certificates() {
-    document.title = " Courses - Certificates";
+const handleFilter = (filters) => {
+    console.log(filters);
+    // Add logic to filter ResourceData based on filters
+  };
+function TechTutors() {
+  document.title = " Courses - Arts";
   return (
     <div className="flex h-screen">
       <div className='z-40'>
@@ -38,7 +49,7 @@ function Certificates() {
           <Link to="/dashboard">
             <SidebarItem icon={<MdDashboardCustomize size={20} />} text="Dashboard" alert />
           </Link>
-          <SidebarItem icon={<MdBook size={20} />} text="Courses">
+          <SidebarItem icon={<MdBook size={20} />} text="Courses" >
             <Link to="/courses">
               <DropdownItem text="All" />
             </Link>
@@ -69,7 +80,7 @@ function Certificates() {
               <DropdownItem text="Test" />
             </Link>
           </SidebarItem>
-          <SidebarItem icon={<MdPeople size={20} />} text="Tutors">
+          <SidebarItem icon={<MdPeople size={20} />} text="Tutors" active>
           <Link to="/tutors">
               <DropdownItem text="All" />
             </Link>
@@ -107,25 +118,30 @@ function Certificates() {
           <Navbar />
         </div>
         <div className='w-full mx-auto md:pl-16 font-poppins p-4 px-6'>
-          <nav className="mb-4" aria-label="breadcrumb">
+          <nav className="mb-4 flex justify-between items-center" aria-label="breadcrumb">
             <ol className="flex leading-none text-[#9835ff] divide-x divide-indigo-400">
               <li className="pr-4">
-                <Link to="/courses">Courses </Link>
+                <Link to="/tutors">Tutors </Link>
               </li>
-              <li className="px-4 text-gray-700">Certificates</li>
+              <li className="px-4 text-gray-700">Technology</li>
             </ol>
+            <FilterButton onFilter={handleFilter} />
           </nav>
-          <h2 className="text-2xl text-[#404660] font-medium mb-8">Certificates</h2>
+          <h2 className="text-2xl text-[#404660] font-medium mb-8">Tech Tutors</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {certificates.map((certificate, index) => (
-              <CertificateCard
-                key={index}
-                title={certificate.title}
-                issuer={certificate.issuer}
-                date={certificate.date}
-                certificateLink={certificate.certificateLink}
-                grade={certificate.grade}
-              />
+            {tutorsData.map((tutor, index) => (
+              <Link to={`/courses/Arts/${index}`} key={index}>
+                <TutorCard
+                  image={tutor.image}
+                  title={tutor.title}
+                  description={tutor.description}
+                  status={tutor.status}
+                  time={tutor.time}
+                  rating={tutor.rating}
+                  ratingCount={tutor.ratingCount}
+                  verifiedStatus={tutor.verifiedStatus}  // Passing verifiedStatus here
+                />
+              </Link>
             ))}
           </div>
         </div>
@@ -134,4 +150,4 @@ function Certificates() {
   );
 }
 
-export default Certificates;
+export default TechTutors;

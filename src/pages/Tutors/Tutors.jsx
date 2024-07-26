@@ -7,13 +7,11 @@ import { IoMdChatbubbles } from "react-icons/io";
 import { MdOutlineDatasetLinked } from "react-icons/md";
 import Navbar from '../../components/Navbar';
 import { FaBook, FaChalkboardTeacher, FaCertificate } from 'react-icons/fa';
-import Card from '../../components/Dashboard/Card';
-import CourseList from '../../components/Courses/CourseList';
 import { Link } from 'react-router-dom';
-import CourseCategories from '../../components/Courses/CourseCategories';
+import TutorCategories from '../../components/Tutors/TutorCategories';
 
-function Courses() {
-  document.title = " Courses - sidec";
+function Tutors() {
+    document.title="Tutors";
   return (
     <div className="flex h-screen">
         <div className='z-40'>
@@ -25,7 +23,7 @@ function Courses() {
             <SidebarItem icon={<MdDashboardCustomize size={20} />} text="Dashboard"  alert/>
             </Link>
             
-            <SidebarItem icon={<MdBook size={20} />} text="Courses" active>
+            <SidebarItem icon={<MdBook size={20} />} text="Courses" >
             <Link to="/courses">
             <DropdownItem text="All" />
             </Link>
@@ -44,7 +42,7 @@ function Courses() {
         </SidebarItem>
           
       
-        <SidebarItem icon={<RiArchiveDrawerFill size={20} />} text="Resources">
+        <SidebarItem icon={<RiArchiveDrawerFill size={20} />} text="Resources" >
         <Link to="/resources">
           <DropdownItem text="All" />
         </Link>
@@ -58,7 +56,7 @@ function Courses() {
           <DropdownItem text="Test" />
         </Link>
         </SidebarItem>
-        <SidebarItem icon={<MdPeople size={20} />} text="Tutors">
+        <SidebarItem icon={<MdPeople size={20} />} text="Tutors" active>
         <Link to="/tutors">
               <DropdownItem text="All" />
             </Link>
@@ -98,7 +96,7 @@ function Courses() {
         </div>
         
         <div className='w-full mx-auto md:pl-9 '>
-           <CourseCategories />
+           <TutorCategories/>
         </div>
       </div>
       
@@ -106,4 +104,4 @@ function Courses() {
   );
 }
 
-export default Courses;
+export default Tutors;

@@ -21,6 +21,10 @@ import Questions from './pages/Resources/Questions';
 import Solutions from './pages/Resources/Solutions';
 import TestPage from './pages/Resources/Test';
 import Support from './pages/Support';
+import Tutors from './pages/Tutors/Tutors';
+import ScienceTutors from './pages/Tutors/ScienceTutors';
+import ArtsTutors from './pages/Tutors/ArtsTutors';
+import TechTutors from './pages/Tutors/TechnologyTutors';
 
 
 function ScrollToTop() {
@@ -62,6 +66,11 @@ function App() {
        <Route path="/resources/questions" element={<Questions/>} />
        <Route path="/resources/solutions" element={<Solutions/>} />
        <Route path="/resources/tests" element={<TestPage/>} />
+       <Route path="/tutors" element={<Tutors/>} />
+       <Route path="/tutors/science" element={<ScienceTutors/>} />
+       <Route path="/tutors/arts" element={<ArtsTutors/>} />
+       <Route path="/tutors/tech" element={<TechTutors/>} />
+       <Route path="/tutors/technology" element={<TechTutors/>} />
        <Route path="/settings" element={<Settings/>} />
        <Route path="/support" element={<Support/>} />
      </Routes>

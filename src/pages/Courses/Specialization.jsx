@@ -111,6 +111,9 @@ function Specialization() {
             </Link>
           </SidebarItem>
           <SidebarItem icon={<MdPeople size={20} />} text="Tutors">
+          <Link to="/tutors">
+              <DropdownItem text="All" />
+            </Link>
             <Link to="/tutors/science">
               <DropdownItem text="Science" />
             </Link>

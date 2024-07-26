@@ -6,51 +6,55 @@ import { MdDashboardCustomize, MdPeople, MdBook, MdSettings, MdHelp, MdMessage, 
 import { RiCompassDiscoverFill, RiArchiveDrawerFill } from "react-icons/ri";
 import { IoMdChatbubbles } from "react-icons/io";
 import Navbar from '../../components/Navbar';
-import { TbAntennaBars5, TbAntennaBars4 } from 'react-icons/tb';
-import CourseCard from '../../components/Courses/CourseCard';
+import { TbAntennaBars5, TbAntennaBars4} from 'react-icons/tb';
 
-const coursesData = [
+import { GoHome } from "react-icons/go";
+import TutorCard from '../../components/Tutors/TutorCard';
+import FilterButton from '../../components/Tutors/FilterButton';
+
+const tutorsData = [
     {
-        image: 'https://img.freepik.com/premium-photo/abstract-background-molecules-technology-with-polygonal-shapes-connecting-dots-lines_7247-1132.jpg?w=740',
-        title: 'Mobile App Development',
-        description: 'Build your first mobile app with React Native...',
-        status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-        time: '3 hours',
+        image: 'https://img.freepik.com/free-photo/portrait-african-american-model_23-2149072141.jpg?t=st=1721980298~exp=1721983898~hmac=52688279fd33cf6f6f7a03e3cbff1c8d5307e8ddbe1751800e342fbd842b1b5c&w=360',
+        title: 'Akong Fred',
+        description: 'History',
+        status: { title: 'ALEVEL', icon: <TbAntennaBars4 size={20} /> },
         rating: 4.3,
-        ratingCount: 130,
+        ratingCount: 78,
       },
-  {
-    image: 'https://img.freepik.com/premium-photo/building-earth-coins-chart-3d-rendering-business-content_35719-1758.jpg?w=740',
-    title: 'Economics for Beginners',
-    description: 'Understand the basics of economics and apply in your...',
-    status: { title: 'Beginner', icon: <TbAntennaBars3 size={20} /> },
-    time: '4 hours',
-    rating: 4.5,
-    ratingCount: 90,
-  },
-  {
-    image: 'https://img.freepik.com/premium-photo/justice-scales-books-wooden-gavel-table-justice-concept_488220-74309.jpg?w=740',
-    title: 'Introduction to Law',
-    description: 'Explore the fundamentals of legal systems...',
-    status: { title: 'Intermediate', icon: <TbAntennaBars4 size={20} /> },
-    time: '5 hours',
-    rating: 4.7,
-    ratingCount: 85,
-  },
-  {
-    image: 'https://img.freepik.com/free-photo/artist-props-photography-studio_23-2148885635.jpg?t=st=1721764748~exp=1721768348~hmac=69bbcd74fa092f2b9da142ecd41ca4f0928f40baf27ab26bb25b67b038844c54&w=360',
-    title: 'Photography Basics',
-    description: 'Understand the basics of photography and camera use...',
-    status: { title: 'Advanced', icon: <TbAntennaBars5 size={20} /> },
-    time: '6 hours',
-    rating: 4.8,
-    ratingCount: 90,
-  },
-  // other courses...
+      {
+        image: 'https://img.freepik.com/free-photo/front-view-smiley-woman-home_23-2150401916.jpg?t=st=1721980365~exp=1721983965~hmac=3246f120378203a30698760147353f0763e63d3aa60418ff2927b5cd4018ee22&w=360',
+        title: 'Susan Eunice',
+        description: 'Economics',
+        status: { title: 'ALEVEL', icon: <TbAntennaBars4 size={20} /> },
+        rating: 4.7,
+        ratingCount: 65,
+        verifiedStatus: true,
+      },
+      {
+        image: 'https://img.freepik.com/free-photo/medium-shot-man-doing-math-indoors_23-2150444904.jpg?t=st=1721980527~exp=1721984127~hmac=9470a09d5afc4297df48215d655af3220e3d9fd341d3bbff9908c16b4e4b395d&w=360',
+        title: 'James Henry',
+        description: 'Geography | Maths Statistics',
+        status: { title: 'OLEVEL', icon: <TbAntennaBars3 size={20} /> },
+        rating: 4.4,
+        ratingCount: 72,
+      },
+      {
+        image: 'https://img.freepik.com/free-photo/attractive-young-african-american-man-wearing-trendy-black-glasses-hat-spending-weekend-morning-home-sitting-living-room-watching-world-news-tv-having-serious-look_273609-1047.jpg?t=st=1721980637~exp=1721984237~hmac=4a722537dbb2037fb92d5d403556aa5a7cb63a671969349f6e633be8be2088fc&w=740',
+        title: 'Mathew Nfor',
+        description: 'History',
+        status: { title: 'ALEVELS', icon: <TbAntennaBars5 size={20} /> },
+        time: '6 hours',
+        rating: 4.8,
+        ratingCount: 90,
+        verifiedStatus: true,
+      },
 ];
-
-function SavedCourses() {
-  document.title = " Courses - Saved Courses";
+const handleFilter = (filters) => {
+    console.log(filters);
+    // Add logic to filter ResourceData based on filters
+  };
+function ArtsTutors() {
+  document.title = " Courses - Arts";
   return (
     <div className="flex h-screen">
       <div className='z-40'>
@@ -61,7 +65,7 @@ function SavedCourses() {
           <Link to="/dashboard">
             <SidebarItem icon={<MdDashboardCustomize size={20} />} text="Dashboard" alert />
           </Link>
-          <SidebarItem icon={<MdBook size={20} />} text="Courses" active>
+          <SidebarItem icon={<MdBook size={20} />} text="Courses" >
             <Link to="/courses">
               <DropdownItem text="All" />
             </Link>
@@ -92,7 +96,7 @@ function SavedCourses() {
               <DropdownItem text="Test" />
             </Link>
           </SidebarItem>
-          <SidebarItem icon={<MdPeople size={20} />} text="Tutors">
+          <SidebarItem icon={<MdPeople size={20} />} text="Tutors" active>
           <Link to="/tutors">
               <DropdownItem text="All" />
             </Link>
@@ -130,26 +134,28 @@ function SavedCourses() {
           <Navbar />
         </div>
         <div className='w-full mx-auto md:pl-16 font-poppins p-4 px-6'>
-          <nav className="mb-4" aria-label="breadcrumb">
+          <nav className="mb-4 flex justify-between items-center" aria-label="breadcrumb">
             <ol className="flex leading-none text-[#9835ff] divide-x divide-indigo-400">
               <li className="pr-4">
-                <Link to="/courses">Courses </Link>
+                <Link to="/tutors">Tutors </Link>
               </li>
-              <li className="px-4 text-gray-700">Saved</li>
+              <li className="px-4 text-gray-700">Arts</li>
             </ol>
+            <FilterButton onFilter={handleFilter} />
           </nav>
-          <h2 className="text-2xl text-[#404660] font-medium mb-8">Saved Courses</h2>
+          <h2 className="text-2xl text-[#404660] font-medium mb-8">Arts Tutors</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {coursesData.map((course, index) => (
-              <Link to={`/courses/arts/${index}`} key={index}>
-                <CourseCard
-                  image={course.image}
-                  title={course.title}
-                  description={course.description}
-                  status={course.status}
-                  time={course.time}
-                  rating={course.rating}
-                  ratingCount={course.ratingCount}
+            {tutorsData.map((tutor, index) => (
+              <Link to={`/courses/Arts/${index}`} key={index}>
+                <TutorCard
+                  image={tutor.image}
+                  title={tutor.title}
+                  description={tutor.description}
+                  status={tutor.status}
+                  time={tutor.time}
+                  rating={tutor.rating}
+                  ratingCount={tutor.ratingCount}
+                  verifiedStatus={tutor.verifiedStatus}  // Passing verifiedStatus here
                 />
               </Link>
             ))}
@@ -160,4 +166,4 @@ function SavedCourses() {
   );
 }
 
-export default SavedCourses;
+export default ArtsTutors;
