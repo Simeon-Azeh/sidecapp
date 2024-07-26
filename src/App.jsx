@@ -25,6 +25,7 @@ import Tutors from './pages/Tutors/Tutors';
 import ScienceTutors from './pages/Tutors/ScienceTutors';
 import ArtsTutors from './pages/Tutors/ArtsTutors';
 import TechTutors from './pages/Tutors/TechnologyTutors';
+import Messages from './pages/Messages';
 
 
 function ScrollToTop() {
@@ -71,6 +72,7 @@ function App() {
        <Route path="/tutors/arts" element={<ArtsTutors/>} />
        <Route path="/tutors/tech" element={<TechTutors/>} />
        <Route path="/tutors/technology" element={<TechTutors/>} />
+       <Route path="/messages" element={<Messages/>} />
        <Route path="/settings" element={<Settings/>} />
        <Route path="/support" element={<Support/>} />
      </Routes>
