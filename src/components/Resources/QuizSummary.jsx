@@ -5,7 +5,7 @@ import { IoCloseCircle, IoCreate } from "react-icons/io5";
 
 function QuizSummary() {
   return (
-    <div className='bg-white border rounded-md px-8 py-8 w-full md:w-[50%] flex justify-center flex-col items-center relative h-72 mx-auto'>
+    <div className='bg-white border rounded-md px-8 py-8 w-full flex justify-center flex-col items-center relative h-72  '>
       <div className='w-20 md:w-24 absolute top-[-15%]'>
         <img src={awardui} alt="Award" className='w-full object-contain' />
       </div>

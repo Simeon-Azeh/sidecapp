@@ -12,6 +12,7 @@ import { IoMdChatbubbles } from "react-icons/io";
 import ResourcesCard from '../../components/Resources/ResourcesCard';
 import { TbAntennaBars3, TbAntennaBars4, TbAntennaBars5 } from 'react-icons/tb';
 import QuizSummary from '../../components/Resources/QuizSummary';
+import Badges from '../../components/Resources/Badges';
 
 const mockResourceData = [
     {
@@ -124,12 +125,12 @@ const TestPage = () => (
         <div>
         <PerformanceGraph />
         </div>
-        <div>
-            <div>
+        <div className='flex flex-col md:flex-row gap-4 justify-between'>
+            <div className='w-full md:1/2'>
                 <QuizSummary />
             </div>
-            <div>
-                
+            <div className='w-full md:1/2'>
+               <Badges /> 
             </div>
         </div>
        
