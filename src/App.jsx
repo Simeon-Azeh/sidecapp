@@ -20,6 +20,7 @@ import Resources from './pages/Resources/Resources';
 import Questions from './pages/Resources/Questions';
 import Solutions from './pages/Resources/Solutions';
 import TestPage from './pages/Resources/Test';
+import Support from './pages/Support';
 
 
 function ScrollToTop() {
@@ -62,6 +63,7 @@ function App() {
        <Route path="/resources/solutions" element={<Solutions/>} />
        <Route path="/resources/tests" element={<TestPage/>} />
        <Route path="/settings" element={<Settings/>} />
+       <Route path="/support" element={<Support/>} />
      </Routes>
      </BrowserRouter>
     </>
