@@ -1,25 +1,29 @@
-// src/components/ChatCard.jsx
 import React from 'react';
-import { FaCircle } from 'react-icons/fa';
 
-const ChatCard = ({ profilePicture, name, messagePreview, time, onlineStatus, newMessages }) => {
+const ChatCard = ({ profilePicture, onlineStatus, name, messagePreview, time, newMessages, onClick }) => {
+  // Function to truncate message preview
+  const truncateMessage = (message, maxLength) => {
+    return message.length > maxLength ? message.slice(0, maxLength) + '...' : message;
+  };
+
   return (
-    <div className="flex items-center p-2 mb-2 bg-gray-50 rounded shadow-sm hover:bg-gray-100 cursor-pointer ">
-      <div className="relative w-12 h-12">
-        <img src={profilePicture} alt={`${name} profile`} className="w-full h-full rounded-full object-cover" />
-        {onlineStatus && <FaCircle size={10} className="absolute bottom-1 right-0 text-green-400 " />}
+    <div className="flex items-center gap-2 p-2 border-b cursor-pointer hover:bg-gray-100" onClick={onClick}>
+      <div className="relative">
+        <img src={profilePicture} alt={name} className="w-10 h-10 rounded-full object-cover" />
+        {onlineStatus && <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full"></span>}
       </div>
-      <div className="ml-3 flex-1">
+      <div className="flex-1">
         <div className="flex justify-between items-center">
-          <h3 className="text-sm font-semibold text-gray-700">{name}</h3>
-          <span className="text-xs text-gray-500">{time}</span>
+          <h2 className="font-semibold text-[#404660]">{name}</h2>
+          <span className="text-sm text-gray-500">{time}</span>
         </div>
-        <div className='flex items-center justify-between'>
-        <p className="text-xs text-gray-500">{messagePreview}</p>
-        {newMessages > 0 && <span className="text-xs bg-[#9835ff] text-white rounded-full px-2 py-0.5 ml-2">{newMessages}</span>}
-        </div>
-       
+        <p className="text-sm text-gray-500">{truncateMessage(messagePreview, 20)}</p>
       </div>
+      {newMessages > 0 && (
+        <div className="bg-[#9835ff] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
+          {newMessages}
+        </div>
+      )}
     </div>
   );
 };

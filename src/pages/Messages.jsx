@@ -11,62 +11,108 @@ import MessagingSection from '../components/Messages/MessagingSection';
 import SharedPhotos from '../components/Messages/SharedPhotos';
 import SharedFiles from '../components/Messages/SharedFiles';
 
-
 const chatData = [
     {
       profilePicture: 'https://img.freepik.com/free-photo/adult-holding-digital-tablet-typing-touch-screen-online-remote-work-business-man-using-modern-device-working-from-home-corporate-project-entrepreneur-with-technology_482257-35650.jpg?t=st=1722004371~exp=1722007971~hmac=40b0fe4d88558f1f8850cf0c71354ac996c9f4bce4bf0c5405dc15c9be525206&w=360',
       onlineStatus: true,
       name: 'Alain Michael',
-      messagePreview: 'Hey, how are you?',
-      time: 'Just now',
-      newMessages: 3,
+      newMessages: 0,
+      messages: [
+        { text: 'Hey, how’s your day going?', time: '9:00 AM', isMine: false },
+        { text: 'Just got started, feeling productive!', time: '9:05 AM', isMine: true },
+        { text: 'Great to hear! Any plans for the weekend?', time: '9:10 AM', isMine: false },
+        { text: 'Not much, just relaxing. What about you?', time: '9:15 AM', isMine: true },
+        { text: 'Let me know?', time: '9:15 AM', isMine: true }
+      ]
     },
     {
       profilePicture: 'https://img.freepik.com/free-photo/african-woman-successful-entrepreneur-wearing-glasses-face-portrait_53876-148050.jpg?t=st=1722008330~exp=1722011930~hmac=b8b34d51a927d9a39231e64526e5a1c0d7aa17f76aa7b095f8e594b98ec48bab&w=740',
       onlineStatus: false,
       name: 'Fonui',
-      messagePreview: 'Are you coming to the mee...',
-      time: '12 mins ago',
       newMessages: 0,
+      messages: [
+        { text: 'Can we reschedule our meeting?', time: '11:15 AM', isMine: false },
+        { text: 'Sure, what time works for you?', time: '11:20 AM', isMine: true },
+        { text: 'How about 3 PM tomorrow?', time: '11:25 AM', isMine: false },
+        { text: '3 PM works for me. See you then!', time: '11:30 AM', isMine: true }
+      ]
     },
     {
       profilePicture: 'https://img.freepik.com/premium-vector/businesswoman-avatar-cartoon-character-profile_18591-50579.jpg?w=740',
       onlineStatus: false,
       name: 'Faith Ama',
-      messagePreview: 'You are to finish your a...',
-      time: '30 mins ago',
       newMessages: 1,
+      messages: [
+        { text: 'Just checking in, any updates on the project?', time: '1:30 PM', isMine: false },
+        { text: 'I’m finalizing the report. Should be ready by end of day.', time: '1:35 PM', isMine: true },
+        { text: 'Perfect, thanks for the update!', time: '1:40 PM', isMine: false },
+        { text: 'No problem! Let me know if you need anything else.', time: '1:45 PM', isMine: false }
+      ]
     },
     {
       profilePicture: 'https://img.freepik.com/free-photo/portrait-man-cartoon-style_23-2151133887.jpg?t=st=1722008262~exp=1722011862~hmac=4558b97a15e5eafad03f9dce6d6709e89351160ed3e4e09adfbf29012b30918d&w=826',
       onlineStatus: false,
       name: 'Jesse2',
-      messagePreview: 'please join our team.',
-      time: '2:15 PM',
       newMessages: 0,
+      messages: [
+        { text: 'Received the files. Will review them soon.', time: '3:00 PM', isMine: false },
+        { text: 'Great, let me know if you need anything.', time: '3:05 PM', isMine: true },
+        { text: 'Will do. Thanks!', time: '3:10 PM', isMine: false },
+        { text: 'You’re welcome! I’ll be available if you need help.', time: '3:15 PM', isMine: true }
+      ]
     },
     {
       profilePicture: 'https://img.freepik.com/free-vector/cloud-robotics-abstract-concept-illustration_335657-3801.jpg?t=st=1722008723~exp=1722012323~hmac=62ad5dfd2a0532064e38ef17d50462aff5739d944b7d63d869aa058287a4770f&w=740',
       onlineStatus: true,
       name: 'Sidec Bot',
-      messagePreview: 'Here are some tips for you.',
-      time: '1:15 PM',
       newMessages: 2,
+      messages: [
+        { text: 'Reminder: Your subscription expires tomorrow.', time: '4:00 PM', isMine: false },
+        { text: 'Thanks for the heads-up. I’ll renew it now.', time: '4:05 PM', isMine: true },
+        { text: 'If you need assistance, just let me know!', time: '4:10 PM', isMine: false },
+        { text: 'Will do! Thanks for the support.', time: '4:15 PM', isMine: true }
+      ]
     },
     {
       profilePicture: 'https://img.freepik.com/premium-photo/flat-no-picture-avatar-profile-picture_941097-35012.jpg?w=740',
       onlineStatus: false,
       name: 'Arrey Fred',
-      messagePreview: 'Meeting tomorrow at 2 PM.',
-      time: 'Yesterday',
       newMessages: 0,
+      messages: [
+        { text: 'Are you free to discuss the proposal?', time: '5:00 PM', isMine: false },
+        { text: 'Yes, I’m available now. Let’s chat.', time: '5:10 PM', isMine: true },
+        { text: 'Great, I’ll call you shortly.', time: '5:15 PM', isMine: false },
+        { text: 'Looking forward to it. Talk soon!', time: '5:20 PM', isMine: true }
+      ]
     },
-    // Add more chat data here
+    {
+      profilePicture: 'https://img.freepik.com/free-photo/young-businessman-wearing-suit-jacket-office_1150-13942.jpg?w=740',
+      onlineStatus: true,
+      name: 'Lucas Morris',
+      newMessages: 5,
+      messages: [
+        { text: 'Can you send over the draft?', time: '6:00 PM', isMine: false },
+        { text: 'I’ve just sent it to your email.', time: '6:05 PM', isMine: true },
+        { text: 'Received, thanks! Will review it tonight.', time: '6:10 PM', isMine: false },
+        { text: 'Let me know if you need any revisions.', time: '6:15 PM', isMine: true }
+      ]
+    },
+    {
+      profilePicture: 'https://img.freepik.com/free-photo/business-woman-with-suit-jacket-holding-coffee-cup-office_1150-13424.jpg?w=740',
+      onlineStatus: true,
+      name: 'Sophia Lee',
+      newMessages: 4,
+      messages: [
+        { text: 'Do you have the meeting agenda?', time: '7:00 PM', isMine: false },
+        { text: 'Yes, it’s attached to the invite.', time: '7:05 PM', isMine: true },
+        { text: 'Got it. I’ll see you in the meeting.', time: '7:10 PM', isMine: false },
+        { text: 'Looking forward to it. Thanks!', time: '7:15 PM', isMine: true }
+      ]
+    }
   ];
   
-
 const Messages = () => {
-  const [selectedChat, setSelectedChat] = useState(chatData[1]);
+  const [selectedChat, setSelectedChat] = useState(chatData[0]);
 
   return (
     <div className="flex h-screen">
@@ -144,37 +190,34 @@ const Messages = () => {
         </div>
         <div className="w-full mx-auto md:pl-16 font-poppins p-4 px-6">
           <div className="flex flex-col md:flex-row gap-2 h-screen">
-            {/* First Container: Teams Section and Chat Cards */}
             <div className="bg-white p-4 border rounded w-full md:w-1/3">
               <div className="mb-2">
                 <TeamsSection />
               </div>
-              <div className="overflow-y-auto ">
+              <div className="overflow-y-auto">
                 <h1 className="rounded font-medium bg-[#f9f9f9] p-2 text-[#404660]">My Chats</h1>
                 <div className="flex flex-col gap-1 mt-4 h-96 overflow-y-auto">
-                  {chatData.map((chat, index) => (
-                    <ChatCard
-                      key={index}
-                      profilePicture={chat.profilePicture}
-                      onlineStatus={chat.onlineStatus}
-                      name={chat.name}
-                      messagePreview={chat.messagePreview}
-                      time={chat.time}
-                      newMessages={chat.newMessages}
-                      onClick={() => setSelectedChat(chat)}
-                    />
-                  ))}
+                  {chatData.map((chat, index) => {
+                    const lastMessage = chat.messages[chat.messages.length - 1];
+                    return (
+                      <ChatCard
+                        key={index}
+                        profilePicture={chat.profilePicture}
+                        onlineStatus={chat.onlineStatus}
+                        name={chat.name}
+                        messagePreview={lastMessage.text}
+                        time={lastMessage.time}
+                        newMessages={chat.newMessages}
+                        onClick={() => setSelectedChat(chat)}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>
-
-            {/* Second Container: Messaging Section */}
-            <div className='bg-white p-4 border rounded w-full md:w-2/3'>
-            <MessagingSection selectedChat={selectedChat} />
-
+            <div className="bg-white p-4 border rounded w-full md:w-2/3">
+              <MessagingSection selectedChat={selectedChat} />
             </div>
-          
-            {/* Third Container: Shared Photos and Files */}
             <div className="bg-white p-4 border rounded w-full md:w-2/4">
               <SharedPhotos />
               <SharedFiles />

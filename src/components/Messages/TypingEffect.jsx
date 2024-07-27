@@ -1,8 +1,11 @@
 import React from 'react';
 
+
 const TypingEffect = () => (
-  <div className="bg-gray-200 p-2 rounded-lg">
-    <span className="typing">...</span>
+  <div className="typing-effect bg-slate-100 p-4 rounded-md ">
+    <div className="dot"></div>
+    <div className="dot"></div>
+    <div className="dot"></div>
   </div>
 );
 
