@@ -13,9 +13,9 @@ const SharedPhotos = () => {
     <div className="overflow-hidden rounded-lg">
       <h2 className="text-xl font-medium text-[#404660] mb-2">Shared Photos</h2>
       <div className="relative">
-        <div className="grid grid-cols-3 md:grid-cols-2 gap-0 md:gap-1 mb-4 py-2 px-4">
+        <div className="md:grid  md:grid-cols-2  md:gap-1 mb-4 py-2 px-4 flex flex-col gap-2">
           {photos.slice(0, 3).map((photo, index) => (
-            <div key={index} className="relative w-20 h-20 flex-shrink-0">
+            <div key={index} className="relative md:w-20 md:h-20 w-[80%] mx-auto md:flex-shrink-0">
               <img
                 src={photo}
                 alt={`Shared ${index}`}
@@ -24,7 +24,7 @@ const SharedPhotos = () => {
             </div>
           ))}
           {photos.length > 3 && (
-            <div className="absolute bottom-2 right-5 w-20 h-20 bg-gray-800 text-white rounded-lg flex items-center justify-center text-sm">
+            <div className="absolute bottom-2.5 right-5 md:w-20 md:h-20 w-[60%] h-48 bg-[#404660] text-white rounded-lg flex items-center justify-center text-sm">
               +{photos.length - 3} more
             </div>
           )}

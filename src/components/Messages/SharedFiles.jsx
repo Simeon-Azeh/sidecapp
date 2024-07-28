@@ -13,7 +13,7 @@ const SharedFiles = () => (
     <h2 className="text-xl font-medium text-[#404660] mb-2">Shared Files</h2>
     <div className="flex flex-col gap-6 mb-6">
       {files.map((file, index) => (
-        <div key={index} className="flex items-center gap-2">
+        <div key={index} className="flex items-center gap-2 border p-2 rounded">
           {file.icon}
           <span className="text-[#404660]">{file.name}</span>
         </div>
