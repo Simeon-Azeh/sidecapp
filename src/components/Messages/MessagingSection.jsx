@@ -20,7 +20,9 @@ const MessagingSection = ({ selectedChat, onBack }) => {
     return selectedChat.messages.lastIndexOf(lastUserMessage);
   };
 
-  const recentUserMessageIndex = getRecentUserMessageIndex();
+  const recentUserMessageIndex = selectedChat ? getRecentUserMessageIndex() : -1;
+
+  if (!selectedChat) return null;
 
   return (
     <div className="h-full flex flex-col">
@@ -38,9 +40,10 @@ const MessagingSection = ({ selectedChat, onBack }) => {
           <div className="relative">
             <MdMoreVert size={24} className="text-gray-500 cursor-pointer" onClick={() => setShowMoreOptions(!showMoreOptions)} />
             {showMoreOptions && (
-              <div className="absolute right-0 mt-2 bg-white border rounded shadow-lg z-10">
-                <button className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Option 1</button>
-                <button className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Option 2</button>
+              <div className="absolute right-0 mt-2 bg-white border rounded shadow-lg z-10 px-4 ">
+                <button className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Block</button>
+                <button className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mute</button>
+                <button className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Delete</button>
               </div>
             )}
           </div>
