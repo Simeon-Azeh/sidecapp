@@ -197,9 +197,9 @@ const Messages = () => {
         <div className="sticky top-0 z-10">
           <Navbar />
         </div>
-        <div className="w-full mx-auto md:pl-16 font-poppins p-4 px-6">
+        <div className="w-full mx-auto py-2 md:pl-16 font-poppins md:p-4 px-6">
           <div className="flex flex-col md:flex-row gap-2 h-screen">
-            <div className={`bg-white p-4 border rounded w-full md:w-1/3 ${selectedChat ? 'hidden md:block' : 'block'}`}>
+            <div className={`bg-white  p-4 border rounded w-full md:w-1/3 ${selectedChat ? 'hidden md:block' : 'block'}`}>
               <div className="mb-2">
                 <TeamsSection />
               </div>
@@ -224,7 +224,7 @@ const Messages = () => {
                 </div>
               </div>
             </div>
-            <div className={`h-full flex-1  bg-white ${selectedChat ? 'block' : 'hidden md:block'}`}>
+            <div className={`h-screen flex-1  bg-white ${selectedChat ? 'block' : 'hidden md:block'}`}>
               {selectedChat ? (
                 <MessagingSection selectedChat={selectedChat} onBack={handleBackClick} />
               ) : (
@@ -244,7 +244,7 @@ const Messages = () => {
 
               )}
             </div>
-            <div className="bg-white p-4 border rounded w-full md:w-1/4">
+            <div className="bg-white p-4 border rounded w-full md:w-1/4 hidden md:block">
               <SharedPhotos />
               <SharedFiles />
             </div>

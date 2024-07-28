@@ -25,7 +25,7 @@ const MessagingSection = ({ selectedChat, onBack }) => {
   if (!selectedChat) return null;
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col px-4 py-2">
       <div className="flex items-center justify-between border-b pb-2 mb-4">
         <div className="flex items-center gap-2">
           <MdArrowBack size={24} className="text-gray-500 cursor-pointer md:hidden" onClick={onBack} />
