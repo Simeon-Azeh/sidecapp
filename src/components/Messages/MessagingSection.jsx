@@ -25,7 +25,7 @@ const MessagingSection = ({ selectedChat, onBack }) => {
   if (!selectedChat) return null;
 
   return (
-    <div className="h-full flex flex-col px-4 py-2">
+    <div className="h-full flex flex-col px-1 md:px-4 py-2">
       <div className="flex items-center justify-between border-b pb-2 mb-4">
         <div className="flex items-center gap-2">
           <MdArrowBack size={24} className="text-gray-500 cursor-pointer md:hidden" onClick={onBack} />
@@ -91,7 +91,7 @@ const MessagingSection = ({ selectedChat, onBack }) => {
           </div>
         </div>
       </div>
-      <div className="mt-4 flex items-center gap-2 border-t pt-2">
+      <div className="md:mt-4 flex items-center gap-2 border-t pt-2">
         <FaPlus size={30} className="text-[#9835ff] border p-1 rounded bg-slate-50 cursor-pointer" />
         <input type="text" placeholder="Type your message here..." className="flex-1 rounded p-1 px-4 outline-none" />
         <FaSmile size={30} className="text-[#9835ff] border p-1 rounded bg-slate-50 cursor-pointer" />
