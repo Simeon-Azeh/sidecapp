@@ -109,7 +109,7 @@ function Register() {
 
   document.title = " Register with sidec";
   return (
-    <div className="w-full md:w-4/5 mx-auto md:py-10 md:px-0 font-poppins">
+    <div className="w-full md:w-4/5 mx-auto md:py-8 md:px-0 font-poppins">
       <div className="flex flex-col md:flex-row items-center bg-white p-8 md:rounded-lg border">
         <img src={RegisterImg} alt="Register" className="w-full mb-8 md:mb-0 md:w-1/2 h-auto hover:scale-105 duration-300 cursor-pointer" />
         <div className="md:ml-8 w-full md:w-1/2">
