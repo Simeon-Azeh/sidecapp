@@ -205,7 +205,7 @@ const Messages = () => {
               </div>
               <div className="overflow-y-auto">
                 <h1 className="rounded font-medium bg-[#f9f9f9] p-2 text-[#404660]">My Chats</h1>
-                <div className="flex flex-col gap-1 mt-4 md:h-96 overflow-y-auto">
+                <div className="flex flex-col gap-1 mt-4 md:max-h-96 overflow-y-auto">
                   {chatData.map((chat, index) => {
                     const lastMessage = chat.messages[chat.messages.length - 1];
                     return (
