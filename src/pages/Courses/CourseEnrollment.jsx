@@ -292,7 +292,7 @@ const CourseEnrollment = () => {
                         <p className="text-gray-600">{comment.comment}</p>
                         <div className="flex items-center mt-2">
                           <FaHeart
-                            className={`cursor-pointer ${comment.liked ? 'text-red-400' : 'text-gray-600'} mr-2`}
+                            className={`cursor-pointer ${comment.liked ? 'text-[#9835ff]' : 'text-gray-600'} mr-2`}
                             onClick={() => handleLikeClick(comment.id)}
                           />
                           <span className="text-gray-600 mr-4">{comment.likes}</span>

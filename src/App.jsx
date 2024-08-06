@@ -29,6 +29,7 @@ import Messages from './pages/Messages';
 import ForgotPassword from './pages/Authentication/ForgotPass';
 import CourseEnrollment from './pages/Courses/CourseEnrollment';
 import Quiz from './pages/Resources/Quiz';
+import CourseMaterial from './pages/Courses/CourseMaterial';
 
 
 function ScrollToTop() {
@@ -68,6 +69,7 @@ function App() {
        <Route path="/courses/enrolled" element={<EnrolledCourses/>} />
        <Route path="/courses/enrollment" element={<CourseEnrollment/>} />
        <Route path="/courses/enrolled/certificates" element={<Certificates/>} />
+       <Route path="/courses/enrolled/course-material" element={<CourseMaterial/>} />
        <Route path="/resources" element={<Resources/>} />
        <Route path="/resources/questions" element={<Questions/>} />
        <Route path="/resources/solutions" element={<Solutions/>} />
