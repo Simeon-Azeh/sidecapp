@@ -28,6 +28,7 @@ import TechTutors from './pages/Tutors/TechnologyTutors';
 import Messages from './pages/Messages';
 import ForgotPassword from './pages/Authentication/ForgotPass';
 import CourseEnrollment from './pages/Courses/CourseEnrollment';
+import Quiz from './pages/Resources/Quiz';
 
 
 function ScrollToTop() {
@@ -71,6 +72,7 @@ function App() {
        <Route path="/resources/questions" element={<Questions/>} />
        <Route path="/resources/solutions" element={<Solutions/>} />
        <Route path="/resources/tests" element={<TestPage/>} />
+       <Route path="/tests/quiz" element={<Quiz/>} />
        <Route path="/tutors" element={<Tutors/>} />
        <Route path="/tutors/science" element={<ScienceTutors/>} />
        <Route path="/tutors/arts" element={<ArtsTutors/>} />
